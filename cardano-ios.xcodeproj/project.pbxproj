@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CA6C63BD21A8B2C800D9656F /* CardanoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6C63B721A8B2C800D9656F /* CardanoManager.m */; };
-		CA6C63BF21A8B2C800D9656F /* libcardano.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6C63BB21A8B2C800D9656F /* libcardano.a */; };
+		CA6C63BF21A8B2C800D9656F /* cardano.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6C63BB21A8B2C800D9656F /* cardano.a */; };
 		CA6C642421A8B58D00D9656F /* CardanoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CA6C63B821A8B2C800D9656F /* CardanoManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA6C642521A8B59400D9656F /* libcardano.h in Headers */ = {isa = PBXBuildFile; fileRef = CA6C63BC21A8B2C800D9656F /* libcardano.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		CA6C642521A8B59400D9656F /* cardano.h in Headers */ = {isa = PBXBuildFile; fileRef = CA6C63BC21A8B2C800D9656F /* cardano.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CA6C642721A8B62D00D9656F /* cardano-ios.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CA6C642621A8B62D00D9656F /* cardano-ios.podspec */; };
 		CA6C642921A8B63A00D9656F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CA6C642821A8B63A00D9656F /* LICENSE */; };
 		CA6C642B21A8B64200D9656F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CA6C642A21A8B64200D9656F /* README.md */; };
@@ -23,8 +23,8 @@
 		CA6C63AE21A8B24400D9656F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA6C63B721A8B2C800D9656F /* CardanoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardanoManager.m; sourceTree = "<group>"; };
 		CA6C63B821A8B2C800D9656F /* CardanoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardanoManager.h; sourceTree = "<group>"; };
-		CA6C63BB21A8B2C800D9656F /* libcardano.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcardano.a; sourceTree = "<group>"; };
-		CA6C63BC21A8B2C800D9656F /* libcardano.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libcardano.h; sourceTree = "<group>"; };
+		CA6C63BB21A8B2C800D9656F /* cardano.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = cardano.a; sourceTree = "<group>"; };
+		CA6C63BC21A8B2C800D9656F /* cardano.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardano.h; sourceTree = "<group>"; };
 		CA6C642621A8B62D00D9656F /* cardano-ios.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cardano-ios.podspec"; sourceTree = "<group>"; };
 		CA6C642821A8B63A00D9656F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CA6C642A21A8B64200D9656F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA6C63BF21A8B2C800D9656F /* libcardano.a in Frameworks */,
+				CA6C63BF21A8B2C800D9656F /* cardano.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,18 +95,18 @@
 		CA6C63B921A8B2C800D9656F /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				CA6C63BA21A8B2C800D9656F /* libcardano */,
+				CA6C63BA21A8B2C800D9656F /* cardano */,
 			);
 			path = libs;
 			sourceTree = "<group>";
 		};
-		CA6C63BA21A8B2C800D9656F /* libcardano */ = {
+		CA6C63BA21A8B2C800D9656F /* cardano */ = {
 			isa = PBXGroup;
 			children = (
-				CA6C63BC21A8B2C800D9656F /* libcardano.h */,
-				CA6C63BB21A8B2C800D9656F /* libcardano.a */,
+				CA6C63BC21A8B2C800D9656F /* cardano.h */,
+				CA6C63BB21A8B2C800D9656F /* cardano.a */,
 			);
-			path = libcardano;
+			path = cardano;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +118,7 @@
 			files = (
 				CA6C642D21A8B6F200D9656F /* cardano-ios.h in Headers */,
 				CA6C642421A8B58D00D9656F /* CardanoManager.h in Headers */,
-				CA6C642521A8B59400D9656F /* libcardano.h in Headers */,
+				CA6C642521A8B59400D9656F /* cardano.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

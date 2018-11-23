@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#import "libcardano.h"
+#import "cardano.h"
 
 //------------------------------------------//
 

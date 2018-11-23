@@ -18,9 +18,11 @@ Pod::Spec.new do |s|
     s.public_header_files = 'cardano-ios/src/cardano-ios.h'
     s.source_files = 'cardano-ios/src/cardano-ios.h'
 
-    s.subspec 'Classes' do |ss|
-        ss.source_files = 'cardano-ios/src/**/*.{h,m}'
-        ss.public_header_files = 'cardano-ios/src/**/*.h'
+    s.subspec 'CardanoLib' do |cardano|
+        cardano.preserve_paths = 'libs/cardano/cardano.h'
+        cardano.vendored_libraries = 'libs/cardano/cardano.a'
+        cardano.libraries = 'cardano'
+        cardano.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/libs/cardano/**" }
     end
 end
 
