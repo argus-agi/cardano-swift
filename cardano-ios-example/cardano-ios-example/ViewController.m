@@ -32,11 +32,11 @@
 
 - (void)checkValidationMethods {
     NSString *addressToValidate = @"Ae2tdPwUPEZ7f7RgToFi4EbUozdBNEYs34kRvSKPc33PUD93QUPT9JmxXwq";
-    BOOL valid = [CardanoManager.shared validateCardanoAddress:addressToValidate];
+    BOOL valid = [CardanoManager.shared addressesValidateBase58Address:addressToValidate];
     NSLog(@"%@ is valid: %@", addressToValidate, valid ? @"YES" : @"NO");
     
     addressToValidate = @"Ae2tdPwUPEZ7f7RgToFi4EbUozdBNEYs34kRvSKPc33PUD93QUPT9JmxXw1";
-    valid = [CardanoManager.shared validateCardanoAddress:addressToValidate];
+    valid = [CardanoManager.shared addressesValidateBase58Address:addressToValidate];
     NSLog(@"%@ is valid: %@", addressToValidate, valid ? @"YES" : @"NO");
 }
 
