@@ -11,7 +11,6 @@
 		CA6C63BF21A8B2C800D9656F /* cardano.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6C63BB21A8B2C800D9656F /* cardano.a */; };
 		CA6C642421A8B58D00D9656F /* CardanoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CA6C63B821A8B2C800D9656F /* CardanoManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA6C642521A8B59400D9656F /* cardano.h in Headers */ = {isa = PBXBuildFile; fileRef = CA6C63BC21A8B2C800D9656F /* cardano.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CA6C642721A8B62D00D9656F /* cardano-ios.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CA6C642621A8B62D00D9656F /* cardano-ios.podspec */; };
 		CA6C642921A8B63A00D9656F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CA6C642821A8B63A00D9656F /* LICENSE */; };
 		CA6C642B21A8B64200D9656F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CA6C642A21A8B64200D9656F /* README.md */; };
 		CA6C642D21A8B6F200D9656F /* cardano-ios.h in Headers */ = {isa = PBXBuildFile; fileRef = CA6C642C21A8B6B500D9656F /* cardano-ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,7 +24,6 @@
 		CA6C63B821A8B2C800D9656F /* CardanoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardanoManager.h; sourceTree = "<group>"; };
 		CA6C63BB21A8B2C800D9656F /* cardano.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = cardano.a; sourceTree = "<group>"; };
 		CA6C63BC21A8B2C800D9656F /* cardano.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardano.h; sourceTree = "<group>"; };
-		CA6C642621A8B62D00D9656F /* cardano-ios.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cardano-ios.podspec"; sourceTree = "<group>"; };
 		CA6C642821A8B63A00D9656F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CA6C642A21A8B64200D9656F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CA6C642C21A8B6B500D9656F /* cardano-ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cardano-ios.h"; sourceTree = "<group>"; };
@@ -47,7 +45,6 @@
 		CA6C63A021A8B24400D9656F = {
 			isa = PBXGroup;
 			children = (
-				CA6C642621A8B62D00D9656F /* cardano-ios.podspec */,
 				CA6C642821A8B63A00D9656F /* LICENSE */,
 				CA6C642A21A8B64200D9656F /* README.md */,
 				CA6C642E21A8BC3300D9656F /* .travis.yml */,
@@ -183,7 +180,6 @@
 				CA6C642B21A8B64200D9656F /* README.md in Resources */,
 				CA6C642921A8B63A00D9656F /* LICENSE in Resources */,
 				CA6C642F21A8BC3300D9656F /* .travis.yml in Resources */,
-				CA6C642721A8B62D00D9656F /* cardano-ios.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +334,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/cardano-ios/libs/libcardano",
+					"$(PROJECT_DIR)/cardano-ios/libs/cardano",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hellc.cardano-ios";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -366,7 +362,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/cardano-ios/libs/libcardano",
+					"$(PROJECT_DIR)/cardano-ios/libs/cardano",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hellc.cardano-ios";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

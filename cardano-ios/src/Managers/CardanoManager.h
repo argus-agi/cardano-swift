@@ -87,46 +87,47 @@ NS_ASSUME_NONNULL_BEGIN
                                            unsigned long mnemonicSize))completion;
 
 #pragma mark - Keys context methods
-
-/**
- Get public key from the private one
- 
- @param privkey private key
- @return return public key
- */
-- (CardanoXpub *)keysPublicKeyFromPrivateKey:(CardanoXprv *)privkey;
-
-/**
- Get private key from 96 size byte array
- 
- @param bytes byte array
- @return return private key
- */
-- (CardanoXprv *)keysPrivateKeyFromBytes:(uint8_t[XPRV_SIZE])bytes;
-
-/**
- Get byte array of size 96 for private key
- 
- @param privkey private key
- @return return bytes
- */
-- (uint8_t *)keysPrivateKeyToBytes:(CardanoXprv *)privkey;
-
-/**
- Delete private key
- 
- @param privkey private key pointer
- @return return public key
- */
-- (CardanoXpub *)keysDeletePrivateKey:(CardanoXprv *)privkey;
-
-/**
- Delete public key
- 
- @param pubkey public key pointer
- @return return public key
- */
-- (CardanoXpub *)keysDeletePublicKey:(CardanoXpub *)pubkey;
+//TODO CHECK RS CODE: Methods is missing
+//
+///**
+// Get public key from the private one
+//
+// @param privkey private key
+// @return return public key
+// */
+//- (CardanoXpub *)keysPublicKeyFromPrivateKey:(CardanoXprv *)privkey;
+//
+///**
+// Get private key from 96 size byte array
+//
+// @param bytes byte array
+// @return return private key
+// */
+//- (CardanoXprv *)keysPrivateKeyFromBytes:(uint8_t[XPRV_SIZE])bytes;
+//
+///**
+// Get byte array of size 96 for private key
+//
+// @param privkey private key
+// @return return bytes
+// */
+//- (uint8_t *)keysPrivateKeyToBytes:(CardanoXprv *)privkey;
+//
+///**
+// Delete private key
+//
+// @param privkey private key pointer
+// @return return public key
+// */
+//- (CardanoXpub *)keysDeletePrivateKey:(CardanoXprv *)privkey;
+//
+///**
+// Delete public key
+//
+// @param pubkey public key pointer
+// @return return public key
+// */
+//- (CardanoXpub *)keysDeletePublicKey:(CardanoXpub *)pubkey;
 
 #pragma mark - Utility functions to work with addresses
 #pragma mark - Addresses context methods
@@ -211,14 +212,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Generate addresses for account
-
+ 
  @param account account pointer
  @param internal internal description?
  @param fromIndex start index
  @param numIndices numIndices description?
  @return return addresses pointers
  */
-- (char **)walletGenerateAddressesForAccount:(CardanoAccount *)account
+- (NSString *)walletGenerateAddressForAccount:(CardanoAccount *)account
                                       internal:(NSInteger)internal
                                      fromIndex:(NSUInteger)fromIndex
                                     numIndices:(NSUInteger)numIndices;
@@ -228,7 +229,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  New transaction output pointer
-
+ 
  @param txId transaction id
  @param index transaction index
  @return return transaction output pointer
@@ -237,14 +238,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Delete transaction output pointer
-
+ 
  @param txOutputPtr transaction output pointer
  */
 - (void)transactionDeleteTxOutputPtr:(CardanoTxoptr *)txOutputPtr;
 
 /**
  New transaction output
-
+ 
  @param address transaction address pointer
  @param value output value
  @return return transaction output
@@ -254,28 +255,28 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Delete translaction output
-
+ 
  @param txOutput transaction output
  */
 - (void)transactionDeleteTxOutput:(CardanoTxoutput *)txOutput;
 
 /**
  Create new transaction builder
-
+ 
  @return return transaction builder
  */
 - (CardanoTransactionBuilder *)transactionNewTxBuilder;
 
 /**
  Delete transaction builder
-
+ 
  @param txBuilder transaction builder
  */
 - (void)transactionDeleteTxBuilder:(CardanoTransactionBuilder *)txBuilder;
 
 /**
  Add transaction output pointer to transaction builder
-
+ 
  @param txOutputPtr transaction output pointer
  @param txBuilder transaction builder
  */
@@ -284,7 +285,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Add transaction input to transaction output pointer by transaction builder
-
+ 
  @param inputValue transaction input value
  @param txOutputPtr transaction output pointer
  @param txBuilder transaction builder
@@ -296,25 +297,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Change transaction address for transaction builder
-
+ 
  @param changeAddress transaction address
  @param txBuilder transaction builder
  @return return result type
  */
 - (CardanoResult)transactionChangeAddress:(CardanoAddress *)changeAddress
-                              forTxBuilder:(CardanoTransactionBuilder *)txBuilder;
+                             forTxBuilder:(CardanoTransactionBuilder *)txBuilder;
 
 /**
  Calculate transaction fee from transaction builder
-
+ 
  @param txBuilder transaction builder
  @return return transaction fee
  */
 - (uint64_t)transactionTxFeeFromTxBuilder:(CardanoTransactionBuilder *)txBuilder;
 
 /**
-Result transaction from transaction builder
-
+ Result transaction from transaction builder
+ 
  @param txBuilder transaction builder
  @return return final transaction
  */
@@ -322,7 +323,7 @@ Result transaction from transaction builder
 
 /**
  Finalize result transaction
-
+ 
  @param txResult result transaction from transaction builder
  @return return finalized transaction
  */
@@ -330,7 +331,7 @@ Result transaction from transaction builder
 
 /**
  Add witness to finalized transaction
-
+ 
  @param xprv private key bytes
  @param protocolMagic protocol magic byte ???
  @param txId transaction id
@@ -344,7 +345,7 @@ Result transaction from transaction builder
 
 /**
  Sign finalized (with witness) transaction
-
+ 
  @param finalizedTx finalized transaction
  @return return signed transactiob
  */
@@ -355,3 +356,4 @@ Result transaction from transaction builder
 NS_ASSUME_NONNULL_END
 
 //------------------------------------------//
+

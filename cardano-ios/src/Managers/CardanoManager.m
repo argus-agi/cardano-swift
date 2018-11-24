@@ -64,56 +64,56 @@
 }
 
 #pragma mark - Keys context methods
-
-/**
- Get public key from the private one
- 
- @param privkey private key
- @return return public key
- */
-- (CardanoXpub *)keysPublicKeyFromPrivateKey:(CardanoXprv *)privkey {
-    return (CardanoXpub *)cardano_xprv_to_xpub((cardano_xprv *)privkey);
-}
-
-/**
- Get private key from 96 size byte array
- 
- @param bytes byte array
- @return return private key
- */
-- (CardanoXprv *)keysPrivateKeyFromBytes:(uint8_t[XPRV_SIZE])bytes {
-    return (CardanoXprv *)cardano_xprv_from_bytes(bytes);
-}
-
-/**
- Get byte array of size 96 for private key
- 
- @param privkey private key
- @return return bytes
- */
-- (uint8_t *)keysPrivateKeyToBytes:(CardanoXprv *)privkey {
-    return cardano_xprv_to_bytes((cardano_xprv *)privkey);
-}
-
-/**
- Delete private key
- 
- @param privkey private key pointer
- @return return public key
- */
-- (CardanoXpub *)keysDeletePrivateKey:(CardanoXprv *)privkey {
-    return (CardanoXpub *)cardano_xprv_delete((cardano_xprv *)privkey);
-}
-
-/**
- Delete public key
- 
- @param pubkey public key pointer
- @return return public key
- */
-- (CardanoXpub *)keysDeletePublicKey:(CardanoXpub *)pubkey {
-    return (CardanoXpub *)cardano_xpub_delete((cardano_xpub *)pubkey);
-}
+//
+///**
+// Get public key from the private one
+//
+// @param privkey private key
+// @return return public key
+// */
+//- (CardanoXpub *)keysPublicKeyFromPrivateKey:(CardanoXprv *)privkey {
+//    return (CardanoXpub *)cardano_xprv_to_xpub((cardano_xprv *)privkey);
+//}
+//
+///**
+// Get private key from 96 size byte array
+//
+// @param bytes byte array
+// @return return private key
+// */
+//- (CardanoXprv *)keysPrivateKeyFromBytes:(uint8_t[XPRV_SIZE])bytes {
+//    return (CardanoXprv *)cardano_xprv_from_bytes(bytes);
+//}
+//
+///**
+// Get byte array of size 96 for private key
+//
+// @param privkey private key
+// @return return bytes
+// */
+//- (uint8_t *)keysPrivateKeyToBytes:(CardanoXprv *)privkey {
+//    return cardano_xprv_to_bytes((cardano_xprv *)privkey);
+//}
+//
+///**
+// Delete private key
+//
+// @param privkey private key pointer
+// @return return public key
+// */
+//- (CardanoXpub *)keysDeletePrivateKey:(CardanoXprv *)privkey {
+//    return (CardanoXpub *)cardano_xprv_delete((cardano_xprv *)privkey);
+//}
+//
+///**
+// Delete public key
+//
+// @param pubkey public key pointer
+// @return return public key
+// */
+//- (CardanoXpub *)keysDeletePublicKey:(CardanoXpub *)pubkey {
+//    return (CardanoXpub *)cardano_xpub_delete((cardano_xpub *)pubkey);
+//}
 
 #pragma mark - Addresses context methods
 
@@ -182,9 +182,9 @@
     
     const uint8_t * const entropyPtr = (const uint8_t *)[entropy bytes];
     return (CardanoWallet *)cardano_wallet_new(entropyPtr,
-                                        entropy.length,
-                                      [password cStringUsingEncoding:NSUTF8StringEncoding],
-                                        password.length);
+                                               entropy.length,
+                                               [password cStringUsingEncoding:NSUTF8StringEncoding],
+                                               password.length);
 }
 
 /**
@@ -228,18 +228,18 @@
  @param numIndices numIndices description?
  @return return addresses pointers
  */
-- (char **)walletGenerateAddressesForAccount:(CardanoAccount *)account
+- (NSString *)walletGenerateAddressForAccount:(CardanoAccount *)account
                                       internal:(NSInteger)internal
                                      fromIndex:(NSUInteger)fromIndex
                                     numIndices:(NSUInteger)numIndices {
     
-    char ** addresses_ptr = NULL;
+    char *addresses_ptr = NULL;
     cardano_account_generate_addresses((cardano_account *)account,
                                        (int)internal,
                                        (unsigned int)fromIndex,
                                        (unsigned long)numIndices,
-                                       addresses_ptr);
-    return addresses_ptr;
+                                       &addresses_ptr);
+    return [[NSString alloc] initWithUTF8String:addresses_ptr];
 }
 
 #pragma mark - Transaction context methods
@@ -405,4 +405,5 @@
 @end
 
 //------------------------------------------//
+
 
