@@ -7,4 +7,7 @@
    <FileRef
       location = "group:cardano-ios-example/cardano-ios-example.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:cardano-ios-example-swift/cardano-ios-example-swift.xcodeproj">
+   </FileRef>
 </Workspace>
