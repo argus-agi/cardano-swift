@@ -8,7 +8,7 @@ To run the example project, clone the repo, and run `cardano-ios-example` or `ca
 
 Create a bridging header file, and add the cardano-ios framework dependency. Provide bridging header file location in `Project's build settings` -> `Swift Compiler - General` -> `Objective-C Bridging Header` field.
 
-```swift
+```ObjectiveC
 #import <cardano_ios/cardano-ios.h>
 ```
 ```swift
