@@ -87,7 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
                                            unsigned long mnemonicSize))completion;
 
 #pragma mark - Keys context methods
-//TODO CHECK RS CODE: Methods is missing
+//TODO CHECK RS CODE: Methods are missing
 //
 ///**
 // Get public key from the private one
