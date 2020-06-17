@@ -46,6 +46,8 @@
 		CAA20D7D249A72C7007FEDF4 /* RemoteWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D7B249A72C7007FEDF4 /* RemoteWallet.swift */; };
 		CAA20D7F249A7695007FEDF4 /* RemoteTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D7E249A7695007FEDF4 /* RemoteTransaction.swift */; };
 		CAA20D80249A7695007FEDF4 /* RemoteTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D7E249A7695007FEDF4 /* RemoteTransaction.swift */; };
+		CAA20D83249A7DE2007FEDF4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */; };
+		CAA20D84249A7DE2007FEDF4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,7 @@
 		CAA20D78249A7237007FEDF4 /* RemotePayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePayment.swift; sourceTree = "<group>"; };
 		CAA20D7B249A72C7007FEDF4 /* RemoteWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWallet.swift; sourceTree = "<group>"; };
 		CAA20D7E249A7695007FEDF4 /* RemoteTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTransaction.swift; sourceTree = "<group>"; };
+		CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA20D2A249A57EF007FEDF4 /* Cardano.h */,
+				CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */,
 				CAA20D2B249A57EF007FEDF4 /* Info.plist */,
 				CAA20D51249A5D58007FEDF4 /* Cardano */,
 				CAA20D6A249A6D18007FEDF4 /* Provider */,
@@ -228,6 +232,7 @@
 				CAA20D23249A57EF007FEDF4 /* Sources */,
 				CAA20D24249A57EF007FEDF4 /* Frameworks */,
 				CAA20D25249A57EF007FEDF4 /* Resources */,
+				CAA20D81249A7D80007FEDF4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -299,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA20D83249A7DE2007FEDF4 /* .swiftlint.yml in Resources */,
 				CAA20D4B249A5A56007FEDF4 /* Cardano.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,11 +313,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA20D84249A7DE2007FEDF4 /* .swiftlint.yml in Resources */,
 				CAA20D4C249A5A56007FEDF4 /* Cardano.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CAA20D81249A7D80007FEDF4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect --path \"$SRCROOT\"/Cardano\n    swiftlint --path \"$SRCROOT\"/Cardano\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAA20D23249A57EF007FEDF4 /* Sources */ = {

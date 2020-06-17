@@ -19,10 +19,22 @@ public struct CardanoMessage: Codable {
 }
 
 public protocol Cardano {
-    func buildTransaction(inputs: [TransactionInput], outputs: [TransactionOutput], feeAlgorithm: FeeAlgorithm?) -> Transaction
+    func buildTransaction(inputs: [TransactionInput],
+                          outputs: [TransactionOutput],
+                          feeAlgorithm: FeeAlgorithm?) -> Transaction
     func account(mnemonic: String, passphrase: String, accountIndex: Int) -> CardanoAccount
-    func address(publicParentKey: String, index: Int, type: AddressType, accountIndex: Int, chainSettings: ChainSettings?) -> Address
-    func signMessage(privateParentKey: String, addressType: AddressType, signingIndex: Int, message: String) -> CardanoMessage
+    func address(publicParentKey: String,
+                 index: Int,
+                 type: AddressType,
+                 accountIndex: Int,
+                 chainSettings: ChainSettings?) -> Address
+    func signMessage(privateParentKey: String,
+                     addressType: AddressType,
+                     signingIndex: Int,
+                     message: String) -> CardanoMessage
     func verifyMessage(publicKey: String, message: String, signature: String) -> Bool
-    func inputSelection(outputs: [TransactionOutput], utxoSet: [AddressingUtxo], changeAddress: String, feeAlgorithm: FeeAlgorithm?) -> TransactionSelection
+    func inputSelection(outputs: [TransactionOutput],
+                        utxoSet: [AddressingUtxo],
+                        changeAddress: String,
+                        feeAlgorithm: FeeAlgorithm?) -> TransactionSelection
 }

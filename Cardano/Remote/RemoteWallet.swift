@@ -9,8 +9,8 @@
 import Foundation
 
 public enum RemoteUnit: String, Codable {
-    case lovelace = "lovelace"
-    case ada = "ada"
+    case lovelace
+    case ada
 }
 
 public struct RemoteAmount: Codable {

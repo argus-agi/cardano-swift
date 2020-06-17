@@ -15,7 +15,7 @@ public protocol Transaction {
     var finalize: String { get }
     var fee: String { get }
     var estimateFee: String? { get }
-    
+
     func addWitness(privateParentKey: String, addressing: TransactionAddressing, chainSettings: ChainSettings?)
     func addExternalWitness(publicParentKey: String, addressType: AddressType, witnessIndex: String)
 }

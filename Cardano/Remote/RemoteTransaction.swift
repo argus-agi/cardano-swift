@@ -9,8 +9,8 @@
 import Foundation
 
 public enum RemoteTransactionDirection: String, Codable {
-    case outgoing = "outgoing"
-    case incoming = "incoming"
+    case outgoing
+    case incoming
 }
 
 public struct RemoteTransactionTime: Codable {
@@ -21,7 +21,7 @@ public struct RemoteTransactionTime: Codable {
 public struct RemoteTransactionBlock: Codable {
     var slotNumber: UInt?
     var epochNumber: UInt?
-    
+
     private enum CodingKeys: String, CodingKey {
         case slotNumber = "slot_number"
         case epochNumber = "epoch_number"
@@ -37,7 +37,7 @@ public struct RemoteTransaction: Codable {
     var inputs: [RemotePayment]?
     var outputs: [RemotePayment]?
     var status: String?
-    
+
     private enum CodingKeys: String, CodingKey {
         case id, amount, depth, direction, inputs, outputs, status
         case insertedAt = "inserted_at"

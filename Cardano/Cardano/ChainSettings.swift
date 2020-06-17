@@ -9,6 +9,6 @@
 import Foundation
 
 public enum ChainSettings: String, Codable {
-    case mainnet = "mainnet"
-    case testnet = "testnet"
+    case mainnet
+    case testnet
 }

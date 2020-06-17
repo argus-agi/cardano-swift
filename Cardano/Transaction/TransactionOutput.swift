@@ -32,12 +32,12 @@ public protocol TransactionOptionalFields: Codable {
 
 public struct TransactionOutput: Codable, TransactionRequiredFields, TransactionOptionalFields {
     // MARK: TransactionRequiredFields
-    
+
     public var address: String?
     public var value: String?
-    
+
     // MARK: TransactionOptionalFields
-    
+
     public var isChange: Bool?
     public var fullAddress: TransactionFullAddress?
 }

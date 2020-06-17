@@ -9,8 +9,8 @@
 import Foundation
 
 public enum RemoteAddressState: String, Codable {
-    case used = "used"
-    case unused = "unused"
+    case used
+    case unused
 }
 
 public struct RemoteAddress: Codable {
