@@ -16,6 +16,36 @@
 		CAA20D49249A58EC007FEDF4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D47249A58EC007FEDF4 /* Address.swift */; };
 		CAA20D4B249A5A56007FEDF4 /* Cardano.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CAA20D4A249A5A56007FEDF4 /* Cardano.podspec */; };
 		CAA20D4C249A5A56007FEDF4 /* Cardano.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CAA20D4A249A5A56007FEDF4 /* Cardano.podspec */; };
+		CAA20D53249A6099007FEDF4 /* Cardano.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D52249A6099007FEDF4 /* Cardano.swift */; };
+		CAA20D54249A6099007FEDF4 /* Cardano.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D52249A6099007FEDF4 /* Cardano.swift */; };
+		CAA20D56249A6187007FEDF4 /* TransactionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D55249A6187007FEDF4 /* TransactionInput.swift */; };
+		CAA20D57249A6187007FEDF4 /* TransactionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D55249A6187007FEDF4 /* TransactionInput.swift */; };
+		CAA20D59249A6196007FEDF4 /* TransactionOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D58249A6196007FEDF4 /* TransactionOutput.swift */; };
+		CAA20D5A249A6196007FEDF4 /* TransactionOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D58249A6196007FEDF4 /* TransactionOutput.swift */; };
+		CAA20D5C249A628E007FEDF4 /* FeeAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D5B249A628E007FEDF4 /* FeeAlgorithm.swift */; };
+		CAA20D5D249A628E007FEDF4 /* FeeAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D5B249A628E007FEDF4 /* FeeAlgorithm.swift */; };
+		CAA20D5F249A6325007FEDF4 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D5E249A6325007FEDF4 /* Transaction.swift */; };
+		CAA20D60249A6325007FEDF4 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D5E249A6325007FEDF4 /* Transaction.swift */; };
+		CAA20D62249A6485007FEDF4 /* ChainSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D61249A6485007FEDF4 /* ChainSettings.swift */; };
+		CAA20D63249A6485007FEDF4 /* ChainSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D61249A6485007FEDF4 /* ChainSettings.swift */; };
+		CAA20D65249A656E007FEDF4 /* TransactionSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D64249A656E007FEDF4 /* TransactionSelection.swift */; };
+		CAA20D66249A656E007FEDF4 /* TransactionSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D64249A656E007FEDF4 /* TransactionSelection.swift */; };
+		CAA20D68249A6982007FEDF4 /* Utxo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D67249A6982007FEDF4 /* Utxo.swift */; };
+		CAA20D69249A6982007FEDF4 /* Utxo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D67249A6982007FEDF4 /* Utxo.swift */; };
+		CAA20D6C249A6D44007FEDF4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D6B249A6D44007FEDF4 /* Provider.swift */; };
+		CAA20D6D249A6D44007FEDF4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D6B249A6D44007FEDF4 /* Provider.swift */; };
+		CAA20D6F249A6DEB007FEDF4 /* CardanoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D6E249A6DEB007FEDF4 /* CardanoProvider.swift */; };
+		CAA20D70249A6DEB007FEDF4 /* CardanoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D6E249A6DEB007FEDF4 /* CardanoProvider.swift */; };
+		CAA20D72249A713B007FEDF4 /* WalletProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D71249A713B007FEDF4 /* WalletProvider.swift */; };
+		CAA20D73249A713B007FEDF4 /* WalletProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D71249A713B007FEDF4 /* WalletProvider.swift */; };
+		CAA20D76249A71A5007FEDF4 /* RemoteAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D75249A71A5007FEDF4 /* RemoteAddress.swift */; };
+		CAA20D77249A71A5007FEDF4 /* RemoteAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D75249A71A5007FEDF4 /* RemoteAddress.swift */; };
+		CAA20D79249A7237007FEDF4 /* RemotePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D78249A7237007FEDF4 /* RemotePayment.swift */; };
+		CAA20D7A249A7237007FEDF4 /* RemotePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D78249A7237007FEDF4 /* RemotePayment.swift */; };
+		CAA20D7C249A72C7007FEDF4 /* RemoteWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D7B249A72C7007FEDF4 /* RemoteWallet.swift */; };
+		CAA20D7D249A72C7007FEDF4 /* RemoteWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D7B249A72C7007FEDF4 /* RemoteWallet.swift */; };
+		CAA20D7F249A7695007FEDF4 /* RemoteTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D7E249A7695007FEDF4 /* RemoteTransaction.swift */; };
+		CAA20D80249A7695007FEDF4 /* RemoteTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D7E249A7695007FEDF4 /* RemoteTransaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +68,21 @@
 		CAA20D44249A58D1007FEDF4 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		CAA20D47249A58EC007FEDF4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		CAA20D4A249A5A56007FEDF4 /* Cardano.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cardano.podspec; sourceTree = "<group>"; };
+		CAA20D52249A6099007FEDF4 /* Cardano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardano.swift; sourceTree = "<group>"; };
+		CAA20D55249A6187007FEDF4 /* TransactionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInput.swift; sourceTree = "<group>"; };
+		CAA20D58249A6196007FEDF4 /* TransactionOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionOutput.swift; sourceTree = "<group>"; };
+		CAA20D5B249A628E007FEDF4 /* FeeAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeAlgorithm.swift; sourceTree = "<group>"; };
+		CAA20D5E249A6325007FEDF4 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		CAA20D61249A6485007FEDF4 /* ChainSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainSettings.swift; sourceTree = "<group>"; };
+		CAA20D64249A656E007FEDF4 /* TransactionSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSelection.swift; sourceTree = "<group>"; };
+		CAA20D67249A6982007FEDF4 /* Utxo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utxo.swift; sourceTree = "<group>"; };
+		CAA20D6B249A6D44007FEDF4 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		CAA20D6E249A6DEB007FEDF4 /* CardanoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardanoProvider.swift; sourceTree = "<group>"; };
+		CAA20D71249A713B007FEDF4 /* WalletProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletProvider.swift; sourceTree = "<group>"; };
+		CAA20D75249A71A5007FEDF4 /* RemoteAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddress.swift; sourceTree = "<group>"; };
+		CAA20D78249A7237007FEDF4 /* RemotePayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePayment.swift; sourceTree = "<group>"; };
+		CAA20D7B249A72C7007FEDF4 /* RemoteWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWallet.swift; sourceTree = "<group>"; };
+		CAA20D7E249A7695007FEDF4 /* RemoteTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTransaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +128,10 @@
 			children = (
 				CAA20D2A249A57EF007FEDF4 /* Cardano.h */,
 				CAA20D2B249A57EF007FEDF4 /* Info.plist */,
+				CAA20D51249A5D58007FEDF4 /* Cardano */,
+				CAA20D6A249A6D18007FEDF4 /* Provider */,
+				CAA20D74249A718B007FEDF4 /* Remote */,
+				CAA20D50249A5C92007FEDF4 /* Transaction */,
 				CAA20D43249A58BC007FEDF4 /* Wallet */,
 				CAA20D42249A58A5007FEDF4 /* Lib */,
 			);
@@ -110,8 +159,51 @@
 			children = (
 				CAA20D44249A58D1007FEDF4 /* Wallet.swift */,
 				CAA20D47249A58EC007FEDF4 /* Address.swift */,
+				CAA20D67249A6982007FEDF4 /* Utxo.swift */,
 			);
 			path = Wallet;
+			sourceTree = "<group>";
+		};
+		CAA20D50249A5C92007FEDF4 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				CAA20D55249A6187007FEDF4 /* TransactionInput.swift */,
+				CAA20D58249A6196007FEDF4 /* TransactionOutput.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		CAA20D51249A5D58007FEDF4 /* Cardano */ = {
+			isa = PBXGroup;
+			children = (
+				CAA20D52249A6099007FEDF4 /* Cardano.swift */,
+				CAA20D61249A6485007FEDF4 /* ChainSettings.swift */,
+				CAA20D5B249A628E007FEDF4 /* FeeAlgorithm.swift */,
+				CAA20D5E249A6325007FEDF4 /* Transaction.swift */,
+				CAA20D64249A656E007FEDF4 /* TransactionSelection.swift */,
+			);
+			path = Cardano;
+			sourceTree = "<group>";
+		};
+		CAA20D6A249A6D18007FEDF4 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				CAA20D6B249A6D44007FEDF4 /* Provider.swift */,
+				CAA20D6E249A6DEB007FEDF4 /* CardanoProvider.swift */,
+				CAA20D71249A713B007FEDF4 /* WalletProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		CAA20D74249A718B007FEDF4 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				CAA20D75249A71A5007FEDF4 /* RemoteAddress.swift */,
+				CAA20D78249A7237007FEDF4 /* RemotePayment.swift */,
+				CAA20D7E249A7695007FEDF4 /* RemoteTransaction.swift */,
+				CAA20D7B249A72C7007FEDF4 /* RemoteWallet.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,8 +318,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA20D53249A6099007FEDF4 /* Cardano.swift in Sources */,
+				CAA20D68249A6982007FEDF4 /* Utxo.swift in Sources */,
+				CAA20D7C249A72C7007FEDF4 /* RemoteWallet.swift in Sources */,
+				CAA20D62249A6485007FEDF4 /* ChainSettings.swift in Sources */,
+				CAA20D59249A6196007FEDF4 /* TransactionOutput.swift in Sources */,
+				CAA20D72249A713B007FEDF4 /* WalletProvider.swift in Sources */,
+				CAA20D5F249A6325007FEDF4 /* Transaction.swift in Sources */,
+				CAA20D56249A6187007FEDF4 /* TransactionInput.swift in Sources */,
+				CAA20D6C249A6D44007FEDF4 /* Provider.swift in Sources */,
+				CAA20D7F249A7695007FEDF4 /* RemoteTransaction.swift in Sources */,
+				CAA20D65249A656E007FEDF4 /* TransactionSelection.swift in Sources */,
 				CAA20D48249A58EC007FEDF4 /* Address.swift in Sources */,
+				CAA20D76249A71A5007FEDF4 /* RemoteAddress.swift in Sources */,
+				CAA20D5C249A628E007FEDF4 /* FeeAlgorithm.swift in Sources */,
+				CAA20D79249A7237007FEDF4 /* RemotePayment.swift in Sources */,
 				CAA20D45249A58D1007FEDF4 /* Wallet.swift in Sources */,
+				CAA20D6F249A6DEB007FEDF4 /* CardanoProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,9 +342,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA20D5A249A6196007FEDF4 /* TransactionOutput.swift in Sources */,
 				CAA20D49249A58EC007FEDF4 /* Address.swift in Sources */,
+				CAA20D66249A656E007FEDF4 /* TransactionSelection.swift in Sources */,
+				CAA20D69249A6982007FEDF4 /* Utxo.swift in Sources */,
+				CAA20D77249A71A5007FEDF4 /* RemoteAddress.swift in Sources */,
+				CAA20D63249A6485007FEDF4 /* ChainSettings.swift in Sources */,
+				CAA20D54249A6099007FEDF4 /* Cardano.swift in Sources */,
 				CAA20D46249A58D1007FEDF4 /* Wallet.swift in Sources */,
+				CAA20D80249A7695007FEDF4 /* RemoteTransaction.swift in Sources */,
+				CAA20D7A249A7237007FEDF4 /* RemotePayment.swift in Sources */,
+				CAA20D5D249A628E007FEDF4 /* FeeAlgorithm.swift in Sources */,
 				CAA20D36249A57EF007FEDF4 /* CardanoTests.swift in Sources */,
+				CAA20D73249A713B007FEDF4 /* WalletProvider.swift in Sources */,
+				CAA20D57249A6187007FEDF4 /* TransactionInput.swift in Sources */,
+				CAA20D7D249A72C7007FEDF4 /* RemoteWallet.swift in Sources */,
+				CAA20D6D249A6D44007FEDF4 /* Provider.swift in Sources */,
+				CAA20D60249A6325007FEDF4 /* Transaction.swift in Sources */,
+				CAA20D70249A6DEB007FEDF4 /* CardanoProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

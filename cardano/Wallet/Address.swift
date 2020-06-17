@@ -8,16 +8,16 @@
 
 import Foundation
 
-enum AddressType: String, Codable {
+public enum AddressType: String, Codable {
     /// change address
     case int = "Internal"
     /// receipt address
     case ext = "External"
 }
 
-struct Address: Codable {
-    var address: String?
-    var index: Int?
-    var type: AddressType?
-    var accountIndex: Int?
+public struct Address: Codable {
+    let address: String?
+    let index: Int?
+    let type: AddressType?
+    let accountIndex: Int?
 }
