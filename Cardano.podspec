@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Lib' do |lib|
-    lib.source_files       = 'src/lib/**/*.{swift}'
+    lib.source_files       = 'Cardano/Lib/**/*.{swift}'
   end
 
 end
