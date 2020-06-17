@@ -13,7 +13,7 @@ public struct CardanoAccount: Codable {
     let publicParentKey: String
 }
 
-public struct CardanoMessage: Codable {
+public struct CardanoSignedMessage: Codable {
     let signature: String
     let publicKey: String
 }
@@ -31,7 +31,7 @@ public protocol Cardano {
     func signMessage(privateParentKey: String,
                      addressType: AddressType,
                      signingIndex: Int,
-                     message: String) -> CardanoMessage
+                     message: String) -> CardanoSignedMessage
     func verifyMessage(publicKey: String, message: String, signature: String) -> Bool
     func inputSelection(outputs: [TransactionOutput],
                         utxoSet: [AddressingUtxo],

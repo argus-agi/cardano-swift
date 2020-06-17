@@ -8,16 +8,11 @@
 
 import Foundation
 
-public struct SignedMessage: Codable {
-    let publicKey: String?
-    let signature: String?
-}
-
 public protocol KeyManager {
     func sign(transaction: Transaction,
               inputs: [TransactionInput], chainSettings: ChainSettings?,
               completion: @escaping (_ signedTransaction: String?) -> Void)
     func sign(message: String, addressType: AddressType, signingIndex: Int,
-              completion: @escaping (_ signedTransaction: SignedMessage?) -> Void)
-    func publicParentKey(completion: @escaping (_ signedTransaction: String?) -> Void)
+              completion: @escaping (_ signedMessage: CardanoSignedMessage?) -> Void)
+    var publicParentKey: String { get }
 }

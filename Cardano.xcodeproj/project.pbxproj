@@ -52,6 +52,14 @@
 		CAA20D8A249AA7CE007FEDF4 /* AddressDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D88249AA7CE007FEDF4 /* AddressDiscovery.swift */; };
 		CAA20D8D249AB027007FEDF4 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D8C249AB027007FEDF4 /* KeyManager.swift */; };
 		CAA20D8E249AB027007FEDF4 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D8C249AB027007FEDF4 /* KeyManager.swift */; };
+		CAA20DB1249ABF3C007FEDF4 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20DAE249ABF3C007FEDF4 /* PKCS5.swift */; };
+		CAA20DB2249ABF3C007FEDF4 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20DAE249ABF3C007FEDF4 /* PKCS5.swift */; };
+		CAA20DB3249ABF3C007FEDF4 /* Wordlists.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20DAF249ABF3C007FEDF4 /* Wordlists.swift */; };
+		CAA20DB4249ABF3C007FEDF4 /* Wordlists.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20DAF249ABF3C007FEDF4 /* Wordlists.swift */; };
+		CAA20DB5249ABF3C007FEDF4 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20DB0249ABF3C007FEDF4 /* Mnemonic.swift */; };
+		CAA20DB6249ABF3C007FEDF4 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20DB0249ABF3C007FEDF4 /* Mnemonic.swift */; };
+		CAA20DBA249AC5E7007FEDF4 /* LocalKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20DB9249AC5E7007FEDF4 /* LocalKeyManager.swift */; };
+		CAA20DBB249AC5E7007FEDF4 /* LocalKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20DB9249AC5E7007FEDF4 /* LocalKeyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +100,10 @@
 		CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		CAA20D88249AA7CE007FEDF4 /* AddressDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDiscovery.swift; sourceTree = "<group>"; };
 		CAA20D8C249AB027007FEDF4 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
+		CAA20DAE249ABF3C007FEDF4 /* PKCS5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCS5.swift; sourceTree = "<group>"; };
+		CAA20DAF249ABF3C007FEDF4 /* Wordlists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wordlists.swift; sourceTree = "<group>"; };
+		CAA20DB0249ABF3C007FEDF4 /* Mnemonic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
+		CAA20DB9249AC5E7007FEDF4 /* LocalKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalKeyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +168,7 @@
 		CAA20D42249A58A5007FEDF4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				CAA20DB7249AC5AE007FEDF4 /* KeyManagers */,
 				CAA20D85249AA6CC007FEDF4 /* Wallets */,
 			);
 			path = Lib;
@@ -237,6 +250,7 @@
 		CAA20D87249AA79C007FEDF4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CAA20DAD249ABF3C007FEDF4 /* BIP39 */,
 				CAA20D88249AA7CE007FEDF4 /* AddressDiscovery.swift */,
 			);
 			path = Utils;
@@ -248,6 +262,24 @@
 				CAA20D8C249AB027007FEDF4 /* KeyManager.swift */,
 			);
 			path = KeyManager;
+			sourceTree = "<group>";
+		};
+		CAA20DAD249ABF3C007FEDF4 /* BIP39 */ = {
+			isa = PBXGroup;
+			children = (
+				CAA20DAE249ABF3C007FEDF4 /* PKCS5.swift */,
+				CAA20DAF249ABF3C007FEDF4 /* Wordlists.swift */,
+				CAA20DB0249ABF3C007FEDF4 /* Mnemonic.swift */,
+			);
+			path = BIP39;
+			sourceTree = "<group>";
+		};
+		CAA20DB7249AC5AE007FEDF4 /* KeyManagers */ = {
+			isa = PBXGroup;
+			children = (
+				CAA20DB9249AC5E7007FEDF4 /* LocalKeyManager.swift */,
+			);
+			path = KeyManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,16 +420,20 @@
 				CAA20D53249A6099007FEDF4 /* Cardano.swift in Sources */,
 				CAA20D68249A6982007FEDF4 /* Utxo.swift in Sources */,
 				CAA20D7C249A72C7007FEDF4 /* RemoteWallet.swift in Sources */,
+				CAA20DB5249ABF3C007FEDF4 /* Mnemonic.swift in Sources */,
 				CAA20D62249A6485007FEDF4 /* ChainSettings.swift in Sources */,
 				CAA20D59249A6196007FEDF4 /* TransactionOutput.swift in Sources */,
 				CAA20D72249A713B007FEDF4 /* WalletProvider.swift in Sources */,
 				CAA20D5F249A6325007FEDF4 /* Transaction.swift in Sources */,
 				CAA20D56249A6187007FEDF4 /* TransactionInput.swift in Sources */,
+				CAA20DB3249ABF3C007FEDF4 /* Wordlists.swift in Sources */,
+				CAA20DB1249ABF3C007FEDF4 /* PKCS5.swift in Sources */,
 				CAA20D6C249A6D44007FEDF4 /* Provider.swift in Sources */,
 				CAA20D89249AA7CE007FEDF4 /* AddressDiscovery.swift in Sources */,
 				CAA20D7F249A7695007FEDF4 /* RemoteTransaction.swift in Sources */,
 				CAA20D65249A656E007FEDF4 /* TransactionSelection.swift in Sources */,
 				CAA20D48249A58EC007FEDF4 /* Address.swift in Sources */,
+				CAA20DBA249AC5E7007FEDF4 /* LocalKeyManager.swift in Sources */,
 				CAA20D76249A71A5007FEDF4 /* RemoteAddress.swift in Sources */,
 				CAA20D8D249AB027007FEDF4 /* KeyManager.swift in Sources */,
 				CAA20D5C249A628E007FEDF4 /* FeeAlgorithm.swift in Sources */,
@@ -417,13 +453,16 @@
 				CAA20D69249A6982007FEDF4 /* Utxo.swift in Sources */,
 				CAA20D77249A71A5007FEDF4 /* RemoteAddress.swift in Sources */,
 				CAA20D63249A6485007FEDF4 /* ChainSettings.swift in Sources */,
+				CAA20DB6249ABF3C007FEDF4 /* Mnemonic.swift in Sources */,
 				CAA20D54249A6099007FEDF4 /* Cardano.swift in Sources */,
 				CAA20D46249A58D1007FEDF4 /* Wallet.swift in Sources */,
 				CAA20D80249A7695007FEDF4 /* RemoteTransaction.swift in Sources */,
 				CAA20D7A249A7237007FEDF4 /* RemotePayment.swift in Sources */,
 				CAA20D5D249A628E007FEDF4 /* FeeAlgorithm.swift in Sources */,
 				CAA20D8E249AB027007FEDF4 /* KeyManager.swift in Sources */,
+				CAA20DB2249ABF3C007FEDF4 /* PKCS5.swift in Sources */,
 				CAA20D8A249AA7CE007FEDF4 /* AddressDiscovery.swift in Sources */,
+				CAA20DBB249AC5E7007FEDF4 /* LocalKeyManager.swift in Sources */,
 				CAA20D36249A57EF007FEDF4 /* CardanoTests.swift in Sources */,
 				CAA20D73249A713B007FEDF4 /* WalletProvider.swift in Sources */,
 				CAA20D57249A6187007FEDF4 /* TransactionInput.swift in Sources */,
@@ -431,6 +470,7 @@
 				CAA20D6D249A6D44007FEDF4 /* Provider.swift in Sources */,
 				CAA20D60249A6325007FEDF4 /* Transaction.swift in Sources */,
 				CAA20D70249A6DEB007FEDF4 /* CardanoProvider.swift in Sources */,
+				CAA20DB4249ABF3C007FEDF4 /* Wordlists.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

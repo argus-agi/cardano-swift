@@ -25,7 +25,7 @@ public struct TransactionValue: Codable {
 }
 
 public struct TransactionInput: Codable {
-    let pointer: TransactionPointer?
-    let value: TransactionValue?
-    let addressing: TransactionAddressing?
+    let pointer: TransactionPointer
+    let value: TransactionValue
+    let addressing: TransactionAddressing
 }

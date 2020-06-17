@@ -22,9 +22,3 @@ public protocol WalletInstance {
 typealias WalletConstructor = (_ publicParentKey: String?,
     _ chainSettings: ChainSettings?,
     _ walletId: String?) -> WalletInstance
-
-//public func Wallet(cardano: Cardano, provider: Provider) -> WalletInstance {
-//    if case .cardano = provider.type {
-//        return TODO
-//    }
-//}
