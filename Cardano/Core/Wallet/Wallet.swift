@@ -18,3 +18,13 @@ public protocol WalletInstance {
     func balance(completion: @escaping (_ balance: Double?) -> Void)
     func transactions(completion: @escaping (_ balance: Double?) -> Void)
 }
+
+typealias WalletConstructor = (_ publicParentKey: String?,
+    _ chainSettings: ChainSettings?,
+    _ walletId: String?) -> WalletInstance
+
+//public func Wallet(cardano: Cardano, provider: Provider) -> WalletInstance {
+//    if case .cardano = provider.type {
+//        return TODO
+//    }
+//}

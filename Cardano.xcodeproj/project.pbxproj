@@ -48,6 +48,8 @@
 		CAA20D80249A7695007FEDF4 /* RemoteTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D7E249A7695007FEDF4 /* RemoteTransaction.swift */; };
 		CAA20D83249A7DE2007FEDF4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */; };
 		CAA20D84249A7DE2007FEDF4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */; };
+		CAA20D89249AA7CE007FEDF4 /* AddressDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D88249AA7CE007FEDF4 /* AddressDiscovery.swift */; };
+		CAA20D8A249AA7CE007FEDF4 /* AddressDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D88249AA7CE007FEDF4 /* AddressDiscovery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,7 @@
 		CAA20D7B249A72C7007FEDF4 /* RemoteWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWallet.swift; sourceTree = "<group>"; };
 		CAA20D7E249A7695007FEDF4 /* RemoteTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTransaction.swift; sourceTree = "<group>"; };
 		CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		CAA20D88249AA7CE007FEDF4 /* AddressDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDiscovery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,11 +135,7 @@
 				CAA20D2A249A57EF007FEDF4 /* Cardano.h */,
 				CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */,
 				CAA20D2B249A57EF007FEDF4 /* Info.plist */,
-				CAA20D51249A5D58007FEDF4 /* Cardano */,
-				CAA20D6A249A6D18007FEDF4 /* Provider */,
-				CAA20D74249A718B007FEDF4 /* Remote */,
-				CAA20D50249A5C92007FEDF4 /* Transaction */,
-				CAA20D43249A58BC007FEDF4 /* Wallet */,
+				CAA20D86249AA78E007FEDF4 /* Core */,
 				CAA20D42249A58A5007FEDF4 /* Lib */,
 			);
 			path = Cardano;
@@ -154,6 +153,7 @@
 		CAA20D42249A58A5007FEDF4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				CAA20D85249AA6CC007FEDF4 /* Wallets */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -208,6 +208,34 @@
 				CAA20D7B249A72C7007FEDF4 /* RemoteWallet.swift */,
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		CAA20D85249AA6CC007FEDF4 /* Wallets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wallets;
+			sourceTree = "<group>";
+		};
+		CAA20D86249AA78E007FEDF4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CAA20D51249A5D58007FEDF4 /* Cardano */,
+				CAA20D6A249A6D18007FEDF4 /* Provider */,
+				CAA20D74249A718B007FEDF4 /* Remote */,
+				CAA20D50249A5C92007FEDF4 /* Transaction */,
+				CAA20D43249A58BC007FEDF4 /* Wallet */,
+				CAA20D87249AA79C007FEDF4 /* Utils */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CAA20D87249AA79C007FEDF4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CAA20D88249AA7CE007FEDF4 /* AddressDiscovery.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +382,7 @@
 				CAA20D5F249A6325007FEDF4 /* Transaction.swift in Sources */,
 				CAA20D56249A6187007FEDF4 /* TransactionInput.swift in Sources */,
 				CAA20D6C249A6D44007FEDF4 /* Provider.swift in Sources */,
+				CAA20D89249AA7CE007FEDF4 /* AddressDiscovery.swift in Sources */,
 				CAA20D7F249A7695007FEDF4 /* RemoteTransaction.swift in Sources */,
 				CAA20D65249A656E007FEDF4 /* TransactionSelection.swift in Sources */,
 				CAA20D48249A58EC007FEDF4 /* Address.swift in Sources */,
@@ -380,6 +409,7 @@
 				CAA20D80249A7695007FEDF4 /* RemoteTransaction.swift in Sources */,
 				CAA20D7A249A7237007FEDF4 /* RemotePayment.swift in Sources */,
 				CAA20D5D249A628E007FEDF4 /* FeeAlgorithm.swift in Sources */,
+				CAA20D8A249AA7CE007FEDF4 /* AddressDiscovery.swift in Sources */,
 				CAA20D36249A57EF007FEDF4 /* CardanoTests.swift in Sources */,
 				CAA20D73249A713B007FEDF4 /* WalletProvider.swift in Sources */,
 				CAA20D57249A6187007FEDF4 /* TransactionInput.swift in Sources */,
