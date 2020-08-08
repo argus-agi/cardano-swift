@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0DE8D824DF3BEF00EC2FB5 /* ShelleyWalletApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0DE8D724DF3BEF00EC2FB5 /* ShelleyWalletApi.swift */; };
+		0E0DE8D924DF3BEF00EC2FB5 /* ShelleyWalletApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0DE8D724DF3BEF00EC2FB5 /* ShelleyWalletApi.swift */; };
+		0E0DE8DB24DF3D1E00EC2FB5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0E0DE8DA24DF3D1E00EC2FB5 /* Podfile */; };
+		0EA3E24C24DF4586007415BB /* ShelleyWalletError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3E24B24DF4586007415BB /* ShelleyWalletError.swift */; };
+		0EA3E24E24DF4667007415BB /* ShelleyWalletApi+Wallets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3E24D24DF4667007415BB /* ShelleyWalletApi+Wallets.swift */; };
+		0EA3E24F24DF4667007415BB /* ShelleyWalletApi+Wallets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3E24D24DF4667007415BB /* ShelleyWalletApi+Wallets.swift */; };
+		0EA3E25224DF4698007415BB /* ShelleyWalletClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3E25124DF4698007415BB /* ShelleyWalletClient.swift */; };
+		53E30D3CBF3508AF6CE055E0 /* Pods_Cardano.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F121736BB9FFB286ACDB596 /* Pods_Cardano.framework */; };
 		CAA20D31249A57EF007FEDF4 /* Cardano.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA20D27249A57EF007FEDF4 /* Cardano.framework */; };
 		CAA20D36249A57EF007FEDF4 /* CardanoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D35249A57EF007FEDF4 /* CardanoTests.swift */; };
 		CAA20D38249A57EF007FEDF4 /* Cardano.h in Headers */ = {isa = PBXBuildFile; fileRef = CAA20D2A249A57EF007FEDF4 /* Cardano.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +81,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E0DE8D724DF3BEF00EC2FB5 /* ShelleyWalletApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelleyWalletApi.swift; sourceTree = "<group>"; };
+		0E0DE8DA24DF3D1E00EC2FB5 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		0EA3E24B24DF4586007415BB /* ShelleyWalletError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelleyWalletError.swift; sourceTree = "<group>"; };
+		0EA3E24D24DF4667007415BB /* ShelleyWalletApi+Wallets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShelleyWalletApi+Wallets.swift"; sourceTree = "<group>"; };
+		0EA3E25124DF4698007415BB /* ShelleyWalletClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelleyWalletClient.swift; sourceTree = "<group>"; };
+		4F121736BB9FFB286ACDB596 /* Pods_Cardano.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardano.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA67F40B50F944845DB194C /* Pods-Cardano.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardano.release.xcconfig"; path = "Target Support Files/Pods-Cardano/Pods-Cardano.release.xcconfig"; sourceTree = "<group>"; };
 		CAA20D27249A57EF007FEDF4 /* Cardano.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cardano.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA20D2A249A57EF007FEDF4 /* Cardano.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cardano.h; sourceTree = "<group>"; };
 		CAA20D2B249A57EF007FEDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +119,7 @@
 		CAA20DAF249ABF3C007FEDF4 /* Wordlists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wordlists.swift; sourceTree = "<group>"; };
 		CAA20DB0249ABF3C007FEDF4 /* Mnemonic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
 		CAA20DB9249AC5E7007FEDF4 /* LocalKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalKeyManager.swift; sourceTree = "<group>"; };
+		F6A76CFD14E3FEBF39DFA7B6 /* Pods-Cardano.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardano.debug.xcconfig"; path = "Target Support Files/Pods-Cardano/Pods-Cardano.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E30D3CBF3508AF6CE055E0 /* Pods_Cardano.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,13 +142,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E0DE8CC24DF2EEB00EC2FB5 /* Cardano Wallet Backend */ = {
+			isa = PBXGroup;
+			children = (
+				0E0DE8D424DF38F100EC2FB5 /* Shelley */,
+			);
+			path = "Cardano Wallet Backend";
+			sourceTree = "<group>";
+		};
+		0E0DE8D424DF38F100EC2FB5 /* Shelley */ = {
+			isa = PBXGroup;
+			children = (
+				0EA3E24A24DF456D007415BB /* Models */,
+				0EA3E25124DF4698007415BB /* ShelleyWalletClient.swift */,
+				0E0DE8D724DF3BEF00EC2FB5 /* ShelleyWalletApi.swift */,
+				0EA3E24D24DF4667007415BB /* ShelleyWalletApi+Wallets.swift */,
+			);
+			path = Shelley;
+			sourceTree = "<group>";
+		};
+		0EA3E24A24DF456D007415BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0EA3E24B24DF4586007415BB /* ShelleyWalletError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		746759F7E9A7BAAFEA4636C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6A76CFD14E3FEBF39DFA7B6 /* Pods-Cardano.debug.xcconfig */,
+				AEA67F40B50F944845DB194C /* Pods-Cardano.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7DC2962470F3560006D3D098 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F121736BB9FFB286ACDB596 /* Pods_Cardano.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CAA20D1D249A57EF007FEDF4 = {
 			isa = PBXGroup;
 			children = (
+				0E0DE8DA24DF3D1E00EC2FB5 /* Podfile */,
 				CAA20D4A249A5A56007FEDF4 /* Cardano.podspec */,
 				CAA20D29249A57EF007FEDF4 /* Cardano */,
 				CAA20D34249A57EF007FEDF4 /* CardanoTests */,
 				CAA20D28249A57EF007FEDF4 /* Products */,
+				746759F7E9A7BAAFEA4636C4 /* Pods */,
+				7DC2962470F3560006D3D098 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,7 +215,7 @@
 				CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */,
 				CAA20D2B249A57EF007FEDF4 /* Info.plist */,
 				CAA20D86249AA78E007FEDF4 /* Core */,
-				CAA20D42249A58A5007FEDF4 /* Lib */,
+				CAA20D42249A58A5007FEDF4 /* Api */,
 			);
 			path = Cardano;
 			sourceTree = "<group>";
@@ -165,13 +229,12 @@
 			path = CardanoTests;
 			sourceTree = "<group>";
 		};
-		CAA20D42249A58A5007FEDF4 /* Lib */ = {
+		CAA20D42249A58A5007FEDF4 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				CAA20DB7249AC5AE007FEDF4 /* KeyManagers */,
-				CAA20D85249AA6CC007FEDF4 /* Wallets */,
+				0E0DE8CC24DF2EEB00EC2FB5 /* Cardano Wallet Backend */,
 			);
-			path = Lib;
+			path = Api;
 			sourceTree = "<group>";
 		};
 		CAA20D43249A58BC007FEDF4 /* Wallet */ = {
@@ -226,13 +289,6 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		CAA20D85249AA6CC007FEDF4 /* Wallets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Wallets;
-			sourceTree = "<group>";
-		};
 		CAA20D86249AA78E007FEDF4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA20DAD249ABF3C007FEDF4 /* BIP39 */,
+				CAA20DB7249AC5AE007FEDF4 /* KeyManagers */,
 				CAA20D88249AA7CE007FEDF4 /* AddressDiscovery.swift */,
 			);
 			path = Utils;
@@ -300,6 +357,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAA20D3B249A57EF007FEDF4 /* Build configuration list for PBXNativeTarget "Cardano" */;
 			buildPhases = (
+				18544A1DFCA8803F9C04A4A3 /* [CP] Check Pods Manifest.lock */,
 				CAA20D22249A57EF007FEDF4 /* Headers */,
 				CAA20D23249A57EF007FEDF4 /* Sources */,
 				CAA20D24249A57EF007FEDF4 /* Frameworks */,
@@ -340,7 +398,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = hellc;
 				TargetAttributes = {
 					CAA20D26249A57EF007FEDF4 = {
@@ -376,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0DE8DB24DF3D1E00EC2FB5 /* Podfile in Resources */,
 				CAA20D83249A7DE2007FEDF4 /* .swiftlint.yml in Resources */,
 				CAA20D4B249A5A56007FEDF4 /* Cardano.podspec in Resources */,
 			);
@@ -393,6 +452,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18544A1DFCA8803F9C04A4A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cardano-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CAA20D81249A7D80007FEDF4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,10 +504,14 @@
 				CAA20DB5249ABF3C007FEDF4 /* Mnemonic.swift in Sources */,
 				CAA20D62249A6485007FEDF4 /* ChainSettings.swift in Sources */,
 				CAA20D59249A6196007FEDF4 /* TransactionOutput.swift in Sources */,
+				0EA3E25224DF4698007415BB /* ShelleyWalletClient.swift in Sources */,
 				CAA20D72249A713B007FEDF4 /* WalletProvider.swift in Sources */,
+				0EA3E24C24DF4586007415BB /* ShelleyWalletError.swift in Sources */,
 				CAA20D5F249A6325007FEDF4 /* Transaction.swift in Sources */,
+				0EA3E24E24DF4667007415BB /* ShelleyWalletApi+Wallets.swift in Sources */,
 				CAA20D56249A6187007FEDF4 /* TransactionInput.swift in Sources */,
 				CAA20DB3249ABF3C007FEDF4 /* Wordlists.swift in Sources */,
+				0E0DE8D824DF3BEF00EC2FB5 /* ShelleyWalletApi.swift in Sources */,
 				CAA20DB1249ABF3C007FEDF4 /* PKCS5.swift in Sources */,
 				CAA20D6C249A6D44007FEDF4 /* Provider.swift in Sources */,
 				CAA20D89249AA7CE007FEDF4 /* AddressDiscovery.swift in Sources */,
@@ -456,6 +541,7 @@
 				CAA20DB6249ABF3C007FEDF4 /* Mnemonic.swift in Sources */,
 				CAA20D54249A6099007FEDF4 /* Cardano.swift in Sources */,
 				CAA20D46249A58D1007FEDF4 /* Wallet.swift in Sources */,
+				0EA3E24F24DF4667007415BB /* ShelleyWalletApi+Wallets.swift in Sources */,
 				CAA20D80249A7695007FEDF4 /* RemoteTransaction.swift in Sources */,
 				CAA20D7A249A7237007FEDF4 /* RemotePayment.swift in Sources */,
 				CAA20D5D249A628E007FEDF4 /* FeeAlgorithm.swift in Sources */,
@@ -469,6 +555,7 @@
 				CAA20D7D249A72C7007FEDF4 /* RemoteWallet.swift in Sources */,
 				CAA20D6D249A6D44007FEDF4 /* Provider.swift in Sources */,
 				CAA20D60249A6325007FEDF4 /* Transaction.swift in Sources */,
+				0E0DE8D924DF3BEF00EC2FB5 /* ShelleyWalletApi.swift in Sources */,
 				CAA20D70249A6DEB007FEDF4 /* CardanoProvider.swift in Sources */,
 				CAA20DB4249ABF3C007FEDF4 /* Wordlists.swift in Sources */,
 			);
@@ -511,6 +598,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -574,6 +662,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -607,11 +696,12 @@
 		};
 		CAA20D3C249A57EF007FEDF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6A76CFD14E3FEBF39DFA7B6 /* Pods-Cardano.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FV47G7RKX5;
+				DEVELOPMENT_TEAM = T6L5U5HC92;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -634,11 +724,12 @@
 		};
 		CAA20D3D249A57EF007FEDF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA67F40B50F944845DB194C /* Pods-Cardano.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FV47G7RKX5;
+				DEVELOPMENT_TEAM = T6L5U5HC92;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -663,7 +754,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FV47G7RKX5;
+				DEVELOPMENT_TEAM = T6L5U5HC92;
 				INFOPLIST_FILE = CardanoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -682,7 +773,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FV47G7RKX5;
+				DEVELOPMENT_TEAM = T6L5U5HC92;
 				INFOPLIST_FILE = CardanoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

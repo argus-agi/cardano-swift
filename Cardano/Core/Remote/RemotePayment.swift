@@ -10,5 +10,5 @@ import Foundation
 
 public struct RemotePayment: Codable {
     var address: String?
-    var amount: RemoteAmount?
+    var amount: Amount?
 }

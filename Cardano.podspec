@@ -4,14 +4,14 @@ Pod::Spec.new do |s|
   s.name                   = 'Cardano'
   s.version                = '0.0.1'
   s.summary                = 'Cardano Swift SDK'
-  s.homepage               = 'https://github.com/hellc/cardano-swift'
+  s.homepage               = 'https://github.com/kxpone/cardano-swift'
   s.license                = 'MIT'
-  s.author                 = { 'Ivan Manov' => 'ivanmanov@live.com' }
-  s.social_media_url       = 'https://twitter.com/justhellc'
+  s.author                 = { '@hellc' => 'info@kxp.one' }
+  s.social_media_url       = 'https://twitter.com/kxpone'
   s.requires_arc           = false
   s.ios.deployment_target  = '11.0'
 
-  s.source                 = { :git => 'https://github.com/hellc/cardano-swift.git', :branch => 'develop' }
+  s.source                 = { :git => 'https://github.com/kxpone/cardano-swift.git', :branch => 'develop' }
 
   s.default_subspec        = 'All'
   
@@ -22,5 +22,6 @@ Pod::Spec.new do |s|
   s.subspec 'Lib' do |lib|
     lib.source_files       = 'Cardano/Lib/**/*.{swift}'
   end
-
+  
+  spec.dependency 'CatalystNet', :git => 'https://github.com/hellc/CatalystNet.git', :commit => 'fedc632a349ae01284354903f99dfb0969c3fde6'
 end

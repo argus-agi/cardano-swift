@@ -1,0 +1,22 @@
+PODS:
+  - CatalystNet (1.0.0)
+
+DEPENDENCIES:
+  - CatalystNet (from `https://github.com/hellc/CatalystNet.git`, commit `fedc632a349ae01284354903f99dfb0969c3fde6`)
+
+EXTERNAL SOURCES:
+  CatalystNet:
+    :commit: fedc632a349ae01284354903f99dfb0969c3fde6
+    :git: https://github.com/hellc/CatalystNet.git
+
+CHECKOUT OPTIONS:
+  CatalystNet:
+    :commit: fedc632a349ae01284354903f99dfb0969c3fde6
+    :git: https://github.com/hellc/CatalystNet.git
+
+SPEC CHECKSUMS:
+  CatalystNet: 1306325eac659e75abc6b60ee9c6ecfdba91722d
+
+PODFILE CHECKSUM: b92b2c476144705eac68b417805c26b62356f945
+
+COCOAPODS: 1.9.3

@@ -30,9 +30,9 @@ public struct RemoteTransactionBlock: Codable {
 
 public struct RemoteTransaction: Codable {
     var id: String?
-    var amount: RemoteAmount?
+    var amount: Amount?
     var insertedAt: RemoteTransactionTime?
-    var depth: RemoteAmount?
+    var depth: Amount?
     var direction: RemoteTransactionDirection?
     var inputs: [RemotePayment]?
     var outputs: [RemotePayment]?
