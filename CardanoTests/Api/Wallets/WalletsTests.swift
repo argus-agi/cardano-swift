@@ -51,4 +51,15 @@ class WalletsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
+    func testWalletsList() {
+        let expectation = self.expectation(description: "Known wallets")
+        
+        ShelleyWalletApi.shared.wallets() { (wallets, error) in
+            XCTAssertTrue(((wallets?.contains(where: { $0.id == "9e37dbdbb2e4c99cdf92fedaaadea7a3aac8c574" })) != nil))
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
 }

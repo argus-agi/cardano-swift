@@ -58,4 +58,23 @@ public extension ShelleyWalletApi {
             }
         }
     }
+
+    /// Return a list of known wallets, ordered from oldest to newest.
+    func wallets(completion: @escaping (_ wallets: [RemoteWallet]?, _ error: Error?) -> Void) {
+        var resource = Resource<[RemoteWallet], ShelleyWalletError>(
+            path: Endpoints.wallets
+        )
+
+        resource.method = .get
+
+        self.load(resource) { (response) in
+            if let wallets = response.value as? [RemoteWallet], response.error == nil {
+                completion(wallets, nil)
+            } else if case .custom(let error) = response.error {
+                completion(nil, error)
+            } else {
+                completion(nil, response.error)
+            }
+        }
+    }
 }
