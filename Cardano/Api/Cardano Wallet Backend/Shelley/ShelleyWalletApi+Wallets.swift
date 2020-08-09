@@ -11,6 +11,10 @@ import CatalystNet
 public extension ShelleyWalletApi {
     fileprivate struct Endpoints {
         static let wallets = "/wallets"
+
+        static func walletStatisticsUtxos(for id: String) -> String {
+            return "/wallets/\(id)/statistics/utxos"
+        }
     }
 
     /// Create and restore a wallet from a mnemonic sentence.
@@ -70,6 +74,29 @@ public extension ShelleyWalletApi {
         self.load(resource) { (response) in
             if let wallets = response.value as? [RemoteWallet], response.error == nil {
                 completion(wallets, nil)
+            } else if case .custom(let error) = response.error {
+                completion(nil, error)
+            } else {
+                completion(nil, response.error)
+            }
+        }
+    }
+
+    /// Return the UTxOs distribution across the whole wallet, in the form of a histogram.
+    /// - Parameters:
+    ///   - id: Wallet ID
+    ///   String <hex> 40 characters
+    func walletUtxos(for id: String,
+                     completion: @escaping (_ statsUtxos: RemoteWalletStatsUtxos?, _ error: Error?) -> Void) {
+        var resource = Resource<RemoteWalletStatsUtxos, ShelleyWalletError>(
+            path: Endpoints.walletStatisticsUtxos(for: id)
+        )
+
+        resource.method = .get
+
+        self.load(resource) { (response) in
+            if let statsUtxos = response.value as? RemoteWalletStatsUtxos, response.error == nil {
+                completion(statsUtxos, nil)
             } else if case .custom(let error) = response.error {
                 completion(nil, error)
             } else {

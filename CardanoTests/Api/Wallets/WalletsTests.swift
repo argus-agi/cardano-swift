@@ -62,4 +62,15 @@ class WalletsTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
+    func testWalletStatsUtxos() {
+        let expectation = self.expectation(description: "Known wallets")
+        
+        ShelleyWalletApi.shared.walletUtxos(for: "9e37dbdbb2e4c99cdf92fedaaadea7a3aac8c574") { (statsUtxos, error) in
+            XCTAssertTrue(statsUtxos?.total?.quantity == 1000000)
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
 }

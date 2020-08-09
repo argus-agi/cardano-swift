@@ -139,3 +139,9 @@ public struct RemoteWallet: Codable {
         case addressPoolGap = "address_pool_gap"
     }
 }
+
+public struct RemoteWalletStatsUtxos: Codable {
+    let total: Amount?
+    let scale: String?
+    let distribution: [String: UInt]?
+}
