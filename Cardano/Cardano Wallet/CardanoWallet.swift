@@ -38,3 +38,19 @@ public class CardanoWalletClient: RestClient {
         super.init(baseUrl: "\(host):\(port)/v2")
     }
 }
+
+/// Shelley Cardano Wallet Api
+public class CardanoWalletApi: Api {
+    /// Shelley wallet Rest cleint property
+    public var client: CardanoWalletClient!
+
+    public func load<T, E>(_ resource: Resource<T, E>,
+                           multitasking: Bool = false,
+                           completion: @escaping (Result<Any, E>) -> Void) {
+        var resource = resource
+
+        resource.headers += ["Content-Type": "application/json"]
+
+        super.load(resource, self.client, multitasking: multitasking, completion: completion)
+    }
+}
