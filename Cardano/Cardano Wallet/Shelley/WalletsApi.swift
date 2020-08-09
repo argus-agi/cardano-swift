@@ -1,5 +1,5 @@
 //
-//  ShelleyWalletApi+Wallets.swift
+//  WalletsApi.swift
 //  Cardano
 //
 //  Created by Ivan Manov on 8/8/20.
@@ -8,7 +8,23 @@
 
 import CatalystNet
 
-public extension ShelleyWalletApi {
+/// Shelley Cardano Wallet Api
+public class WalletsApi: Api {
+    /// Shelley wallet Rest cleint property
+    public var client: CardanoWalletClient!
+
+    public func load<T, E>(_ resource: Resource<T, E>,
+                           multitasking: Bool = false,
+                           completion: @escaping (Result<Any, E>) -> Void) {
+        var resource = resource
+
+        resource.headers += ["Content-Type": "application/json"]
+
+        super.load(resource, self.client, multitasking: multitasking, completion: completion)
+    }
+}
+
+public extension WalletsApi {
     fileprivate struct Endpoints {
         static let wallets = "/wallets"
 
@@ -37,13 +53,13 @@ public extension ShelleyWalletApi {
     ///     String [ 10 .. 255 ] characters
     ///   - poolGap: Number of consecutive unused addresses allowed. Default: 20.
     ///     UInt [ 10 .. 100 ]
-    func walletRestore(name: String,
-                       mnemonic sentence: [String],
-                       mnemonic secondFactor: [String]? = nil,
-                       passphrase: String,
-                       address poolGap: UInt = 20,
-                       completion: @escaping (_ wallet: RemoteWallet?, _ error: Error?) -> Void) {
-        var resource = Resource<RemoteWallet, ShelleyWalletError>(
+    func restore(name: String,
+                 mnemonic sentence: [String],
+                 mnemonic secondFactor: [String]? = nil,
+                 passphrase: String,
+                 address poolGap: UInt = 20,
+                 completion: @escaping (_ wallet: RemoteWallet?, _ error: Error?) -> Void) {
+        var resource = Resource<RemoteWallet, CardanoError>(
             path: Endpoints.wallets
         )
 
@@ -72,8 +88,8 @@ public extension ShelleyWalletApi {
     }
 
     /// Return a list of known wallets, ordered from oldest to newest.
-    func wallets(completion: @escaping (_ wallets: [RemoteWallet]?, _ error: Error?) -> Void) {
-        var resource = Resource<[RemoteWallet], ShelleyWalletError>(
+    func list(completion: @escaping (_ wallets: [RemoteWallet]?, _ error: Error?) -> Void) {
+        var resource = Resource<[RemoteWallet], CardanoError>(
             path: Endpoints.wallets
         )
 
@@ -94,9 +110,9 @@ public extension ShelleyWalletApi {
     /// - Parameters:
     ///   - id: Wallet ID
     ///   String <hex> 40 characters
-    func walletStatsUtxos(by id: String,
-                          completion: @escaping (_ statsUtxos: RemoteWalletStatsUtxos?, _ error: Error?) -> Void) {
-        var resource = Resource<RemoteWalletStatsUtxos, ShelleyWalletError>(
+    func utxoStats(by id: String,
+                   completion: @escaping (_ statsUtxos: RemoteWalletStatsUtxos?, _ error: Error?) -> Void) {
+        var resource = Resource<RemoteWalletStatsUtxos, CardanoError>(
             path: Endpoints.walletStatisticsUtxos(by: id)
         )
 
@@ -119,7 +135,7 @@ public extension ShelleyWalletApi {
     ///   String <hex> 40 characters
     func wallet(by id: String,
                 completion: @escaping (_ statsUtxos: RemoteWallet?, _ error: Error?) -> Void) {
-        var resource = Resource<RemoteWallet, ShelleyWalletError>(
+        var resource = Resource<RemoteWallet, CardanoError>(
             path: Endpoints.wallet(by: id)
         )
 
@@ -140,9 +156,9 @@ public extension ShelleyWalletApi {
     /// - Parameters:
     ///   - id: Wallet ID
     ///   String <hex> 40 characters
-    func walletDelete(by id: String,
-                      completion: @escaping (_ succeeded: Bool, _ error: Error?) -> Void) {
-        var resource = Resource<AnyResponse, ShelleyWalletError>(
+    func delete(by id: String,
+                completion: @escaping (_ succeeded: Bool, _ error: Error?) -> Void) {
+        var resource = Resource<AnyResponse, CardanoError>(
             path: Endpoints.wallet(by: id)
         )
 
@@ -165,10 +181,10 @@ public extension ShelleyWalletApi {
     ///     String <hex> 40 characters
     ///   - name: New wallet name
     ///     [ 1 .. 255 ] characters
-    func walletName(by id: String,
+    func updateName(by id: String,
                     name: String,
                     completion: @escaping (_ wallet: RemoteWallet?, _ error: Error?) -> Void) {
-        var resource = Resource<RemoteWallet, ShelleyWalletError>(
+        var resource = Resource<RemoteWallet, CardanoError>(
             path: Endpoints.wallet(by: id)
         )
 
@@ -195,11 +211,11 @@ public extension ShelleyWalletApi {
     ///     String [ 10 .. 255 ] characters
     ///   - new: A master passphrase to lock and protect the wallet for sensitive operation (e.g. sending funds).
     ///     String [ 10 .. 255 ] characters
-    func walletPassphrase(by id: String,
+    func updatePassphrase(by id: String,
                           old: String,
                           new: String,
                           completion: @escaping (_ succeeded: Bool, _ error: Error?) -> Void) {
-        var resource = Resource<AnyResponse, ShelleyWalletError>(
+        var resource = Resource<AnyResponse, CardanoError>(
             path: Endpoints.walletPassphrase(by: id)
         )
 

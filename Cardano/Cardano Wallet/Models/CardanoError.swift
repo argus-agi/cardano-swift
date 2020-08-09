@@ -1,5 +1,5 @@
 //
-//  ShelleyWalletError.swift
+//  CardanoError.swift
 //  Cardano
 //
 //  Created by Ivan Manov on 8/8/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ShelleyWalletError: Codable, Error {
+public struct CardanoError: Codable, Error {
     /// A descriptive error message.
     let message: String?
 
