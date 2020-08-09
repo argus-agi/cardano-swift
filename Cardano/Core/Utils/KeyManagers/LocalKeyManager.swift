@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension String: Error {}
+//extension String: Error {}
 
 public class LocalKeyManager: KeyManager {
     private let cardano: Cardano
@@ -18,9 +18,9 @@ public class LocalKeyManager: KeyManager {
     private let account: CardanoAccount
 
     public init(cardano: Cardano, mnemonic: String, password: String, accountIndex: Int = 0) throws {
-        if !Mnemonic.isValid(phrase: mnemonic.components(separatedBy: " ")) {
-            throw "InvalidMnemonic"
-        }
+//        if !Mnemonic.isValid(phrase: mnemonic.components(separatedBy: " ")) {
+//            throw "InvalidMnemonic"
+//        }
 
         self.cardano = cardano
         self.mnemonic = mnemonic

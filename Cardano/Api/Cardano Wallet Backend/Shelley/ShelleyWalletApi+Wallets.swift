@@ -37,9 +37,22 @@ public extension ShelleyWalletApi {
 
         resource.method = .post
 
+        resource.params += [
+            "name": name,
+            "mnemonic_sentence": sentence,
+            "passphrase": passphrase,
+            "address_pool_gap": poolGap
+        ]
+
+        if let secondFactor = secondFactor {
+            resource.params += ["mnemonic_second_factor": secondFactor]
+        }
+
         self.load(resource) { (response) in
             if let wallet = response.value as? RemoteWallet, response.error == nil {
                 completion(wallet, nil)
+            } else if case .custom(let error) = response.error {
+                completion(nil, error)
             } else {
                 completion(nil, response.error)
             }
