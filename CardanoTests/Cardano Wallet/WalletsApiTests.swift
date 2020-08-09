@@ -9,7 +9,7 @@
 import XCTest
 @testable import Cardano
 
-class WalletsTests: XCTestCase {
+class WalletsApiTests: XCTestCase {
     private let validMnemonic = [
         "safe", "meat", "expand", "okay", "degree", "dawn", "siren", "carpet", "tortoise", "shy", "tank",
         "once", "arena", "weasel", "drift", "boring", "beyond", "merry", "across", "steel", "bridge",

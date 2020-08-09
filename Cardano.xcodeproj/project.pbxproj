@@ -17,7 +17,7 @@
 		53E30D3CBF3508AF6CE055E0 /* Pods_Cardano.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F121736BB9FFB286ACDB596 /* Pods_Cardano.framework */; };
 		A592A27EB2AD31F39FEBE03D /* Pods_CardanoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C40FE65ABD59FE48846D645 /* Pods_CardanoTests.framework */; };
 		CAA20D31249A57EF007FEDF4 /* Cardano.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA20D27249A57EF007FEDF4 /* Cardano.framework */; };
-		CAA20D36249A57EF007FEDF4 /* WalletsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D35249A57EF007FEDF4 /* WalletsTests.swift */; };
+		CAA20D36249A57EF007FEDF4 /* WalletsApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D35249A57EF007FEDF4 /* WalletsApiTests.swift */; };
 		CAA20D38249A57EF007FEDF4 /* Cardano.h in Headers */ = {isa = PBXBuildFile; fileRef = CAA20D2A249A57EF007FEDF4 /* Cardano.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAA20D45249A58D1007FEDF4 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D44249A58D1007FEDF4 /* Wallet.swift */; };
 		CAA20D46249A58D1007FEDF4 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D44249A58D1007FEDF4 /* Wallet.swift */; };
@@ -95,7 +95,7 @@
 		CAA20D2A249A57EF007FEDF4 /* Cardano.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cardano.h; sourceTree = "<group>"; };
 		CAA20D2B249A57EF007FEDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAA20D30249A57EF007FEDF4 /* CardanoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardanoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAA20D35249A57EF007FEDF4 /* WalletsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsTests.swift; sourceTree = "<group>"; };
+		CAA20D35249A57EF007FEDF4 /* WalletsApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsApiTests.swift; sourceTree = "<group>"; };
 		CAA20D37249A57EF007FEDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAA20D44249A58D1007FEDF4 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		CAA20D47249A58EC007FEDF4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -172,20 +172,12 @@
 			path = Shelley;
 			sourceTree = "<group>";
 		};
-		0E319F7724DFEB3800167FD2 /* Api */ = {
+		0E319F7724DFEB3800167FD2 /* Cardano Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				0E319F7824DFEB3C00167FD2 /* Wallets */,
+				CAA20D35249A57EF007FEDF4 /* WalletsApiTests.swift */,
 			);
-			path = Api;
-			sourceTree = "<group>";
-		};
-		0E319F7824DFEB3C00167FD2 /* Wallets */ = {
-			isa = PBXGroup;
-			children = (
-				CAA20D35249A57EF007FEDF4 /* WalletsTests.swift */,
-			);
-			path = Wallets;
+			path = "Cardano Wallet";
 			sourceTree = "<group>";
 		};
 		746759F7E9A7BAAFEA4636C4 /* Pods */ = {
@@ -245,7 +237,7 @@
 		CAA20D34249A57EF007FEDF4 /* CardanoTests */ = {
 			isa = PBXGroup;
 			children = (
-				0E319F7724DFEB3800167FD2 /* Api */,
+				0E319F7724DFEB3800167FD2 /* Cardano Wallet */,
 				CAA20D37249A57EF007FEDF4 /* Info.plist */,
 			);
 			path = CardanoTests;
@@ -604,7 +596,7 @@
 				0E0441D724E014A1007A72A1 /* CardanoWallet.swift in Sources */,
 				CAA20D8A249AA7CE007FEDF4 /* AddressDiscovery.swift in Sources */,
 				CAA20DBB249AC5E7007FEDF4 /* LocalKeyManager.swift in Sources */,
-				CAA20D36249A57EF007FEDF4 /* WalletsTests.swift in Sources */,
+				CAA20D36249A57EF007FEDF4 /* WalletsApiTests.swift in Sources */,
 				CAA20D73249A713B007FEDF4 /* WalletProvider.swift in Sources */,
 				CAA20D57249A6187007FEDF4 /* TransactionInput.swift in Sources */,
 				CAA20D7D249A72C7007FEDF4 /* RemoteWallet.swift in Sources */,
