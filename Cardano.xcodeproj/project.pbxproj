@@ -146,14 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E0441BA24E012FD007A72A1 /* Cardano Wallet */ = {
+		0E0441BA24E012FD007A72A1 /* CardanoWallet */ = {
 			isa = PBXGroup;
 			children = (
 				0E0441D524E014A1007A72A1 /* CardanoWallet.swift */,
 				0E0441BF24E012FD007A72A1 /* Models */,
 				0E0441DB24E01583007A72A1 /* Shelley */,
 			);
-			path = "Cardano Wallet";
+			path = CardanoWallet;
 			sourceTree = "<group>";
 		};
 		0E0441BF24E012FD007A72A1 /* Models */ = {
@@ -229,7 +229,7 @@
 				CAA20D82249A7DE2007FEDF4 /* .swiftlint.yml */,
 				CAA20D2B249A57EF007FEDF4 /* Info.plist */,
 				CAA20D86249AA78E007FEDF4 /* Core */,
-				0E0441BA24E012FD007A72A1 /* Cardano Wallet */,
+				0E0441BA24E012FD007A72A1 /* CardanoWallet */,
 			);
 			path = Cardano;
 			sourceTree = "<group>";
