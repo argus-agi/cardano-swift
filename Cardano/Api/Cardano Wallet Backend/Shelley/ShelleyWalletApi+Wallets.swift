@@ -12,12 +12,20 @@ public extension ShelleyWalletApi {
     fileprivate struct Endpoints {
         static let wallets = "/wallets"
 
-        static func walletStatisticsUtxos(for id: String) -> String {
+        static func walletStatisticsUtxos(by id: String) -> String {
             return "/wallets/\(id)/statistics/utxos"
+        }
+
+        static func wallet(by id: String) -> String {
+            return "/wallets/\(id)"
+        }
+
+        static func walletPassphrase(by id: String) -> String {
+            return "/wallets/\(id)/passphrase"
         }
     }
 
-    /// Create and restore a wallet from a mnemonic sentence.
+    /// Restore a wallet from a mnemonic sentence. It will create the wallet on wallet backend if none is restored yet
     /// - Parameters:
     ///   - name: Wallet name
     ///     String [ 1 .. 255 ] characters
@@ -29,12 +37,12 @@ public extension ShelleyWalletApi {
     ///     String [ 10 .. 255 ] characters
     ///   - poolGap: Number of consecutive unused addresses allowed. Default: 20.
     ///     UInt [ 10 .. 100 ]
-    func wallet(name: String,
-                mnemonic sentence: [String],
-                mnemonic secondFactor: [String]? = nil,
-                passphrase: String,
-                address poolGap: UInt = 20,
-                completion: @escaping (_ wallet: RemoteWallet?, _ error: Error?) -> Void) {
+    func walletRestore(name: String,
+                       mnemonic sentence: [String],
+                       mnemonic secondFactor: [String]? = nil,
+                       passphrase: String,
+                       address poolGap: UInt = 20,
+                       completion: @escaping (_ wallet: RemoteWallet?, _ error: Error?) -> Void) {
         var resource = Resource<RemoteWallet, ShelleyWalletError>(
             path: Endpoints.wallets
         )
@@ -86,10 +94,10 @@ public extension ShelleyWalletApi {
     /// - Parameters:
     ///   - id: Wallet ID
     ///   String <hex> 40 characters
-    func walletUtxos(for id: String,
-                     completion: @escaping (_ statsUtxos: RemoteWalletStatsUtxos?, _ error: Error?) -> Void) {
+    func walletStatsUtxos(by id: String,
+                          completion: @escaping (_ statsUtxos: RemoteWalletStatsUtxos?, _ error: Error?) -> Void) {
         var resource = Resource<RemoteWalletStatsUtxos, ShelleyWalletError>(
-            path: Endpoints.walletStatisticsUtxos(for: id)
+            path: Endpoints.walletStatisticsUtxos(by: id)
         )
 
         resource.method = .get
@@ -101,6 +109,114 @@ public extension ShelleyWalletApi {
                 completion(nil, error)
             } else {
                 completion(nil, response.error)
+            }
+        }
+    }
+
+    /// Wallet
+    /// - Parameters:
+    ///   - id: Wallet ID
+    ///   String <hex> 40 characters
+    func wallet(by id: String,
+                completion: @escaping (_ statsUtxos: RemoteWallet?, _ error: Error?) -> Void) {
+        var resource = Resource<RemoteWallet, ShelleyWalletError>(
+            path: Endpoints.wallet(by: id)
+        )
+
+        resource.method = .get
+
+        self.load(resource) { (response) in
+            if let wallet = response.value as? RemoteWallet, response.error == nil {
+                completion(wallet, nil)
+            } else if case .custom(let error) = response.error {
+                completion(nil, error)
+            } else {
+                completion(nil, response.error)
+            }
+        }
+    }
+
+    /// Delete wallet if exists
+    /// - Parameters:
+    ///   - id: Wallet ID
+    ///   String <hex> 40 characters
+    func walletDelete(by id: String,
+                      completion: @escaping (_ succeeded: Bool, _ error: Error?) -> Void) {
+        var resource = Resource<AnyResponse, ShelleyWalletError>(
+            path: Endpoints.wallet(by: id)
+        )
+
+        resource.method = .delete
+
+        self.load(resource) { (response) in
+            if let value = response.value as? String, value.isEmpty, response.error == nil {
+                completion(true, nil)
+            } else if case .custom(let error) = response.error {
+                completion(false, error)
+            } else {
+                completion(false, response.error)
+            }
+        }
+    }
+
+    /// Update wallet's name
+    /// - Parameters:
+    ///   - id: - id: Wallet ID
+    ///     String <hex> 40 characters
+    ///   - name: New wallet name
+    ///     [ 1 .. 255 ] characters
+    func walletName(by id: String,
+                    name: String,
+                    completion: @escaping (_ wallet: RemoteWallet?, _ error: Error?) -> Void) {
+        var resource = Resource<RemoteWallet, ShelleyWalletError>(
+            path: Endpoints.wallet(by: id)
+        )
+
+        resource.method = .put
+
+        resource.params += ["name": name]
+
+        self.load(resource) { (response) in
+            if let wallet = response.value as? RemoteWallet, response.error == nil {
+                completion(wallet, nil)
+            } else if case .custom(let error) = response.error {
+                completion(nil, error)
+            } else {
+                completion(nil, response.error)
+            }
+        }
+    }
+
+    /// Update Passphrase
+    /// - Parameters:
+    ///   - id: - id: Wallet ID
+    ///     String <hex> 40 characters
+    ///   - old: The current passphrase.
+    ///     String [ 10 .. 255 ] characters
+    ///   - new: A master passphrase to lock and protect the wallet for sensitive operation (e.g. sending funds).
+    ///     String [ 10 .. 255 ] characters
+    func walletPassphrase(by id: String,
+                          old: String,
+                          new: String,
+                          completion: @escaping (_ succeeded: Bool, _ error: Error?) -> Void) {
+        var resource = Resource<AnyResponse, ShelleyWalletError>(
+            path: Endpoints.walletPassphrase(by: id)
+        )
+
+        resource.method = .put
+
+        resource.params += [
+            "old_passphrase": old,
+            "new_passphrase": new
+        ]
+
+        self.load(resource) { (response) in
+            if let value = response.value as? String, value.isEmpty, response.error == nil {
+                completion(true, nil)
+            } else if case .custom(let error) = response.error {
+                completion(false, error)
+            } else {
+                completion(false, response.error)
             }
         }
     }

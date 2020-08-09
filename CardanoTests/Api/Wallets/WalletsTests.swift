@@ -34,12 +34,12 @@ class WalletsTests: XCTestCase {
         XCTAssertFalse(result2)
     }
     
-    func testCreateWallet() {
-        let expectation = self.expectation(description: "CreateWallet")
+    func testRestoreWallet() {
+        let expectation = self.expectation(description: "RestoreWallet")
         
-        ShelleyWalletApi.shared.wallet(name: "Test",
-                                       mnemonic: self.validMnemonic,
-                                       passphrase: "TestWallet") { (wallet, error) in
+        ShelleyWalletApi.shared.walletRestore(name: "Test",
+                                              mnemonic: self.validMnemonic,
+                                              passphrase: "TestWallet") { (wallet, error) in
             if let error = error as? ShelleyWalletError {
                 XCTAssertTrue(error.code == "wallet_already_exists")
             } else {
@@ -63,11 +63,56 @@ class WalletsTests: XCTestCase {
     }
     
     func testWalletStatsUtxos() {
-        let expectation = self.expectation(description: "Known wallets")
+        let expectation = self.expectation(description: "Wallet Stats Utxos")
         
-        ShelleyWalletApi.shared.walletUtxos(for: "9e37dbdbb2e4c99cdf92fedaaadea7a3aac8c574") { (statsUtxos, error) in
+        ShelleyWalletApi.shared.walletStatsUtxos(by: "9e37dbdbb2e4c99cdf92fedaaadea7a3aac8c574") { (statsUtxos, error) in
             XCTAssertTrue(statsUtxos?.total?.quantity == 1000000)
             expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testWalletById() {
+        let expectation = self.expectation(description: "Wallet by id")
+        
+        ShelleyWalletApi.shared.wallet(by: "9e37dbdbb2e4c99cdf92fedaaadea7a3aac8c574") { (wallet, error) in
+            XCTAssertTrue(wallet?.id == "9e37dbdbb2e4c99cdf92fedaaadea7a3aac8c574")
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testWalletNameUpdate() {
+        let expectation = self.expectation(description: "Wallet update name")
+        
+        ShelleyWalletApi.shared.walletName(by: "9e37dbdbb2e4c99cdf92fedaaadea7a3aac8c574",
+                                           name: "TestUpdated") { (wallet, error) in
+            XCTAssertTrue(wallet?.name == "TestUpdated")
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testWalletPassphraseUpdate() {
+        let expectation1 = self.expectation(description: "Wallet update passphrase valid")
+        
+        ShelleyWalletApi.shared.walletPassphrase(by: "9e37dbdbb2e4c99cdf92fedaaadea7a3aac8c574",
+                                                 old: "TestWallet",
+                                                 new: "TestWallet") { (succeeded, error) in
+            XCTAssertTrue(succeeded)
+            expectation1.fulfill()
+        }
+        
+        let expectation2 = self.expectation(description: "Wallet update passphrase invalid")
+        
+        ShelleyWalletApi.shared.walletPassphrase(by: "9e37dbdbb2e4c99cdf92fedaaadea7a3aac8c574",
+                                                 old: "WrongPassphrase",
+                                                 new: "TestWallet") { (succeeded, error) in
+            XCTAssertFalse(succeeded)
+            expectation2.fulfill()
         }
         
         waitForExpectations(timeout: 5, handler: nil)
