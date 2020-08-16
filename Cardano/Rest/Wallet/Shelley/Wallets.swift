@@ -8,7 +8,7 @@
 
 import CatalystNet
 
-public class WalletsApi: CardanoWalletApi {
+public extension Cardano.Rest.Wallet.Shelley.Wallets {
     fileprivate struct Endpoints {
         static let wallets = "/wallets"
 
@@ -43,7 +43,7 @@ public class WalletsApi: CardanoWalletApi {
                  passphrase: String,
                  address poolGap: UInt = 20,
                  completion: @escaping (_ wallet: RemoteWallet?, _ error: Error?) -> Void) {
-        var resource = Resource<RemoteWallet, CardanoError>(
+        var resource = Resource<RemoteWallet, Cardano.Rest.ApiError>(
             path: Endpoints.wallets
         )
 
@@ -73,7 +73,7 @@ public class WalletsApi: CardanoWalletApi {
 
     /// Return a list of known wallets, ordered from oldest to newest.
     func list(completion: @escaping (_ wallets: [RemoteWallet]?, _ error: Error?) -> Void) {
-        var resource = Resource<[RemoteWallet], CardanoError>(
+        var resource = Resource<[RemoteWallet], Cardano.Rest.ApiError>(
             path: Endpoints.wallets
         )
 
@@ -96,7 +96,7 @@ public class WalletsApi: CardanoWalletApi {
     ///   String <hex> 40 characters
     func utxoStats(by id: String,
                    completion: @escaping (_ statsUtxos: RemoteWalletStatsUtxos?, _ error: Error?) -> Void) {
-        var resource = Resource<RemoteWalletStatsUtxos, CardanoError>(
+        var resource = Resource<RemoteWalletStatsUtxos, Cardano.Rest.ApiError>(
             path: Endpoints.walletStatisticsUtxos(by: id)
         )
 
@@ -119,7 +119,7 @@ public class WalletsApi: CardanoWalletApi {
     ///   String <hex> 40 characters
     func wallet(by id: String,
                 completion: @escaping (_ statsUtxos: RemoteWallet?, _ error: Error?) -> Void) {
-        var resource = Resource<RemoteWallet, CardanoError>(
+        var resource = Resource<RemoteWallet, Cardano.Rest.ApiError>(
             path: Endpoints.wallet(by: id)
         )
 
@@ -142,7 +142,7 @@ public class WalletsApi: CardanoWalletApi {
     ///   String <hex> 40 characters
     func delete(by id: String,
                 completion: @escaping (_ succeeded: Bool, _ error: Error?) -> Void) {
-        var resource = Resource<AnyResponse, CardanoError>(
+        var resource = Resource<AnyResponse, Cardano.Rest.ApiError>(
             path: Endpoints.wallet(by: id)
         )
 
@@ -168,7 +168,7 @@ public class WalletsApi: CardanoWalletApi {
     func updateName(by id: String,
                     name: String,
                     completion: @escaping (_ wallet: RemoteWallet?, _ error: Error?) -> Void) {
-        var resource = Resource<RemoteWallet, CardanoError>(
+        var resource = Resource<RemoteWallet, Cardano.Rest.ApiError>(
             path: Endpoints.wallet(by: id)
         )
 
@@ -199,7 +199,7 @@ public class WalletsApi: CardanoWalletApi {
                           old: String,
                           new: String,
                           completion: @escaping (_ succeeded: Bool, _ error: Error?) -> Void) {
-        var resource = Resource<AnyResponse, CardanoError>(
+        var resource = Resource<AnyResponse, Cardano.Rest.ApiError>(
             path: Endpoints.walletPassphrase(by: id)
         )
 

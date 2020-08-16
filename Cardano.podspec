@@ -17,15 +17,15 @@ Pod::Spec.new do |s|
   
   s.subspec 'All' do |all|
     all.dependency                      'Cardano/Core'
-    all.dependency                      'Cardano/CardanoWallet'
+    all.dependency                      'Cardano/Rest'
   end
   
   s.subspec 'Core' do |core|
       core.source_files                 = 'Cardano/Core/**/*.{swift}'
   end
   
-  s.subspec 'CardanoWallet' do |wallet|
-      wallet.source_files               = 'Cardano/CardanoWallet/**/*.{swift}'
+  s.subspec 'Rest' do |rest|
+      rest.source_files                 = 'Cardano/Rest/**/*.{swift}'
   end
   
   s.dependency 'CatalystNet', :git => 'https://github.com/hellc/CatalystNet.git', :commit => 'fedc632a349ae01284354903f99dfb0969c3fde6'
