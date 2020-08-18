@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CatalystNet",
+        "repositoryURL": "https://github.com/hellc/CatalystNet.git",
+        "state": {
+          "branch": null,
+          "revision": "fedc632a349ae01284354903f99dfb0969c3fde6",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -60,7 +60,7 @@ extension ShelleyTests.WalletsTests {
 
         waitForExpectations(timeout: 5, handler: nil)
     }
-
+    
     func testWalletsList() {
         let expectation = self.expectation(description: "Known wallets")
 

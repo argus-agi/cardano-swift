@@ -10,4 +10,5 @@ import Foundation
 
 public class Cardano {
     public class Rest {}
+    public class Graphql {}
 }
