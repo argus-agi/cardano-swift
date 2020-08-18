@@ -10,5 +10,4 @@ import Foundation
 
 public extension Cardano.Rest {
     class Wallet {}
-    class Explorer {}
 }

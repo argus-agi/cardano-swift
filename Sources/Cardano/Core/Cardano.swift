@@ -12,3 +12,11 @@ public class Cardano {
     public class Rest {}
     public class Graphql {}
 }
+
+
+public extension Cardano {
+    public enum Network: String, Codable {
+        case mainnet
+        case testnet
+    }
+}
