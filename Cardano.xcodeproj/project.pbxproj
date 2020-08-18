@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		0E0DE8DB24DF3D1E00EC2FB5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0E0DE8DA24DF3D1E00EC2FB5 /* Podfile */; };
+		0E47B1CE24EBC17000DF6731 /* HttpBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1CD24EBC17000DF6731 /* HttpBridgeTests.swift */; };
+		0E47B1D024EBC1AA00DF6731 /* BlocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1CF24EBC1AA00DF6731 /* BlocksTests.swift */; };
+		0E47B1D224EBC1B800DF6731 /* TransactionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1D124EBC1B800DF6731 /* TransactionsTests.swift */; };
+		0E47B1D524EBC1F400DF6731 /* AddressesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1D424EBC1F400DF6731 /* AddressesTests.swift */; };
+		0E47B1D724EBC20100DF6731 /* EpochsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1D624EBC20100DF6731 /* EpochsTests.swift */; };
+		0E47B1D924EBC20E00DF6731 /* GenesisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1D824EBC20E00DF6731 /* GenesisTests.swift */; };
+		0E47B1DB24EBC28100DF6731 /* ShelleyAddressesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1DA24EBC28100DF6731 /* ShelleyAddressesTests.swift */; };
+		0E47B1DD24EBC29700DF6731 /* ShelleyCoinSelectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1DC24EBC29700DF6731 /* ShelleyCoinSelectionsTests.swift */; };
+		0E47B1DF24EBC2A600DF6731 /* ShelleyTransactionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1DE24EBC2A600DF6731 /* ShelleyTransactionsTests.swift */; };
+		0E47B1E124EBC2B300DF6731 /* ShelleyMigrationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1E024EBC2B300DF6731 /* ShelleyMigrationsTests.swift */; };
+		0E47B1E324EBC2C300DF6731 /* ShelleyStakePoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1E224EBC2C300DF6731 /* ShelleyStakePoolsTests.swift */; };
+		0E47B1E624EBC2E400DF6731 /* ByronWalletsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1E524EBC2E400DF6731 /* ByronWalletsTests.swift */; };
+		0E47B1E824EBC2F600DF6731 /* ByronAddressesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1E724EBC2F600DF6731 /* ByronAddressesTests.swift */; };
+		0E47B1EA24EBC30600DF6731 /* ByronCoinSelectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1E924EBC30600DF6731 /* ByronCoinSelectionsTests.swift */; };
+		0E47B1EC24EBC31100DF6731 /* ByronTransactionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1EB24EBC31100DF6731 /* ByronTransactionsTests.swift */; };
+		0E47B1EE24EBC31E00DF6731 /* ByronMigrationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1ED24EBC31E00DF6731 /* ByronMigrationsTests.swift */; };
+		0E47B1F124EBC33800DF6731 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1F024EBC33800DF6731 /* NetworkTests.swift */; };
+		0E47B1F324EBC37900DF6731 /* ProxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1F224EBC37900DF6731 /* ProxyTests.swift */; };
+		0E47B1F524EBC3D500DF6731 /* ShelleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47B1F424EBC3D500DF6731 /* ShelleyTests.swift */; };
 		0E58095224E93ED4000D12D9 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E58094524E93ED4000D12D9 /* Transactions.swift */; };
 		0E58095324E93ED4000D12D9 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E58094524E93ED4000D12D9 /* Transactions.swift */; };
 		0E58095424E93ED4000D12D9 /* Explorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E58094624E93ED4000D12D9 /* Explorer.swift */; };
@@ -35,7 +54,7 @@
 		53E30D3CBF3508AF6CE055E0 /* Pods_Cardano.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F121736BB9FFB286ACDB596 /* Pods_Cardano.framework */; };
 		A592A27EB2AD31F39FEBE03D /* Pods_CardanoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C40FE65ABD59FE48846D645 /* Pods_CardanoTests.framework */; };
 		CAA20D31249A57EF007FEDF4 /* Cardano.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA20D27249A57EF007FEDF4 /* Cardano.framework */; };
-		CAA20D36249A57EF007FEDF4 /* WalletsApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D35249A57EF007FEDF4 /* WalletsApiTests.swift */; };
+		CAA20D36249A57EF007FEDF4 /* ShelleyWalletsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA20D35249A57EF007FEDF4 /* ShelleyWalletsTests.swift */; };
 		CAA20D38249A57EF007FEDF4 /* Cardano.h in Headers */ = {isa = PBXBuildFile; fileRef = CAA20D2A249A57EF007FEDF4 /* Cardano.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAA20D4B249A5A56007FEDF4 /* Cardano.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CAA20D4A249A5A56007FEDF4 /* Cardano.podspec */; };
 		CAA20D4C249A5A56007FEDF4 /* Cardano.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CAA20D4A249A5A56007FEDF4 /* Cardano.podspec */; };
@@ -71,6 +90,25 @@
 		05EE86BCFB3CF8F85848A8E7 /* Pods-CardanoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardanoTests.debug.xcconfig"; path = "Target Support Files/Pods-CardanoTests/Pods-CardanoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0C40FE65ABD59FE48846D645 /* Pods_CardanoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardanoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0DE8DA24DF3D1E00EC2FB5 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0E47B1CD24EBC17000DF6731 /* HttpBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpBridgeTests.swift; sourceTree = "<group>"; };
+		0E47B1CF24EBC1AA00DF6731 /* BlocksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksTests.swift; sourceTree = "<group>"; };
+		0E47B1D124EBC1B800DF6731 /* TransactionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTests.swift; sourceTree = "<group>"; };
+		0E47B1D424EBC1F400DF6731 /* AddressesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesTests.swift; sourceTree = "<group>"; };
+		0E47B1D624EBC20100DF6731 /* EpochsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpochsTests.swift; sourceTree = "<group>"; };
+		0E47B1D824EBC20E00DF6731 /* GenesisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisTests.swift; sourceTree = "<group>"; };
+		0E47B1DA24EBC28100DF6731 /* ShelleyAddressesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelleyAddressesTests.swift; sourceTree = "<group>"; };
+		0E47B1DC24EBC29700DF6731 /* ShelleyCoinSelectionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelleyCoinSelectionsTests.swift; sourceTree = "<group>"; };
+		0E47B1DE24EBC2A600DF6731 /* ShelleyTransactionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelleyTransactionsTests.swift; sourceTree = "<group>"; };
+		0E47B1E024EBC2B300DF6731 /* ShelleyMigrationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelleyMigrationsTests.swift; sourceTree = "<group>"; };
+		0E47B1E224EBC2C300DF6731 /* ShelleyStakePoolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelleyStakePoolsTests.swift; sourceTree = "<group>"; };
+		0E47B1E524EBC2E400DF6731 /* ByronWalletsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByronWalletsTests.swift; sourceTree = "<group>"; };
+		0E47B1E724EBC2F600DF6731 /* ByronAddressesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByronAddressesTests.swift; sourceTree = "<group>"; };
+		0E47B1E924EBC30600DF6731 /* ByronCoinSelectionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByronCoinSelectionsTests.swift; sourceTree = "<group>"; };
+		0E47B1EB24EBC31100DF6731 /* ByronTransactionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByronTransactionsTests.swift; sourceTree = "<group>"; };
+		0E47B1ED24EBC31E00DF6731 /* ByronMigrationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByronMigrationsTests.swift; sourceTree = "<group>"; };
+		0E47B1F024EBC33800DF6731 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		0E47B1F224EBC37900DF6731 /* ProxyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyTests.swift; sourceTree = "<group>"; };
+		0E47B1F424EBC3D500DF6731 /* ShelleyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelleyTests.swift; sourceTree = "<group>"; };
 		0E58094524E93ED4000D12D9 /* Transactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
 		0E58094624E93ED4000D12D9 /* Explorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Explorer.swift; sourceTree = "<group>"; };
 		0E58094724E93ED4000D12D9 /* Genesis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genesis.swift; sourceTree = "<group>"; };
@@ -90,7 +128,7 @@
 		CAA20D2A249A57EF007FEDF4 /* Cardano.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cardano.h; sourceTree = "<group>"; };
 		CAA20D2B249A57EF007FEDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAA20D30249A57EF007FEDF4 /* CardanoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardanoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAA20D35249A57EF007FEDF4 /* WalletsApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsApiTests.swift; sourceTree = "<group>"; };
+		CAA20D35249A57EF007FEDF4 /* ShelleyWalletsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelleyWalletsTests.swift; sourceTree = "<group>"; };
 		CAA20D37249A57EF007FEDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAA20D4A249A5A56007FEDF4 /* Cardano.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cardano.podspec; sourceTree = "<group>"; };
 		CAA20D75249A71A5007FEDF4 /* RemoteAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddress.swift; sourceTree = "<group>"; };
@@ -128,6 +166,12 @@
 		0E22083F24E9397400690A7D /* Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				0E47B1CD24EBC17000DF6731 /* HttpBridgeTests.swift */,
+				0E47B1CF24EBC1AA00DF6731 /* BlocksTests.swift */,
+				0E47B1D124EBC1B800DF6731 /* TransactionsTests.swift */,
+				0E47B1D424EBC1F400DF6731 /* AddressesTests.swift */,
+				0E47B1D624EBC20100DF6731 /* EpochsTests.swift */,
+				0E47B1D824EBC20E00DF6731 /* GenesisTests.swift */,
 			);
 			path = Explorer;
 			sourceTree = "<group>";
@@ -135,9 +179,46 @@
 		0E319F7724DFEB3800167FD2 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				CAA20D35249A57EF007FEDF4 /* WalletsApiTests.swift */,
+				0E47B1D324EBC1C300DF6731 /* Shelley */,
+				0E47B1E424EBC2CB00DF6731 /* Byron */,
+				0E47B1EF24EBC32A00DF6731 /* Miscellaneous */,
 			);
 			path = Wallet;
+			sourceTree = "<group>";
+		};
+		0E47B1D324EBC1C300DF6731 /* Shelley */ = {
+			isa = PBXGroup;
+			children = (
+				0E47B1F424EBC3D500DF6731 /* ShelleyTests.swift */,
+				CAA20D35249A57EF007FEDF4 /* ShelleyWalletsTests.swift */,
+				0E47B1DA24EBC28100DF6731 /* ShelleyAddressesTests.swift */,
+				0E47B1DC24EBC29700DF6731 /* ShelleyCoinSelectionsTests.swift */,
+				0E47B1DE24EBC2A600DF6731 /* ShelleyTransactionsTests.swift */,
+				0E47B1E024EBC2B300DF6731 /* ShelleyMigrationsTests.swift */,
+				0E47B1E224EBC2C300DF6731 /* ShelleyStakePoolsTests.swift */,
+			);
+			path = Shelley;
+			sourceTree = "<group>";
+		};
+		0E47B1E424EBC2CB00DF6731 /* Byron */ = {
+			isa = PBXGroup;
+			children = (
+				0E47B1E524EBC2E400DF6731 /* ByronWalletsTests.swift */,
+				0E47B1E724EBC2F600DF6731 /* ByronAddressesTests.swift */,
+				0E47B1E924EBC30600DF6731 /* ByronCoinSelectionsTests.swift */,
+				0E47B1EB24EBC31100DF6731 /* ByronTransactionsTests.swift */,
+				0E47B1ED24EBC31E00DF6731 /* ByronMigrationsTests.swift */,
+			);
+			path = Byron;
+			sourceTree = "<group>";
+		};
+		0E47B1EF24EBC32A00DF6731 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				0E47B1F024EBC33800DF6731 /* NetworkTests.swift */,
+				0E47B1F224EBC37900DF6731 /* ProxyTests.swift */,
+			);
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 		0E58094324E93ED4000D12D9 /* Rest */ = {
@@ -539,21 +620,40 @@
 				0E58096B24E940F3000D12D9 /* Api.swift in Sources */,
 				0E58096124E93ED4000D12D9 /* Wallets.swift in Sources */,
 				0E58095724E93ED4000D12D9 /* Genesis.swift in Sources */,
+				0E47B1DB24EBC28100DF6731 /* ShelleyAddressesTests.swift in Sources */,
+				0E47B1EC24EBC31100DF6731 /* ByronTransactionsTests.swift in Sources */,
 				CAA20D77249A71A5007FEDF4 /* RemoteAddress.swift in Sources */,
+				0E47B1E124EBC2B300DF6731 /* ShelleyMigrationsTests.swift in Sources */,
 				0E58095B24E93ED4000D12D9 /* Blocks.swift in Sources */,
 				CAA20DB6249ABF3C007FEDF4 /* Mnemonic.swift in Sources */,
 				0E58096324E93ED4000D12D9 /* Error.swift in Sources */,
+				0E47B1F124EBC33800DF6731 /* NetworkTests.swift in Sources */,
+				0E47B1D724EBC20100DF6731 /* EpochsTests.swift in Sources */,
 				0E58095D24E93ED4000D12D9 /* Epochs.swift in Sources */,
+				0E47B1D224EBC1B800DF6731 /* TransactionsTests.swift in Sources */,
 				CAA20D80249A7695007FEDF4 /* RemoteTransaction.swift in Sources */,
 				0E58095324E93ED4000D12D9 /* Transactions.swift in Sources */,
+				0E47B1D024EBC1AA00DF6731 /* BlocksTests.swift in Sources */,
+				0E47B1E824EBC2F600DF6731 /* ByronAddressesTests.swift in Sources */,
+				0E47B1D924EBC20E00DF6731 /* GenesisTests.swift in Sources */,
+				0E47B1E324EBC2C300DF6731 /* ShelleyStakePoolsTests.swift in Sources */,
+				0E47B1DF24EBC2A600DF6731 /* ShelleyTransactionsTests.swift in Sources */,
 				0E58095924E93ED4000D12D9 /* Addresses.swift in Sources */,
 				CAA20D7A249A7237007FEDF4 /* RemotePayment.swift in Sources */,
 				CAA20DB2249ABF3C007FEDF4 /* PKCS5.swift in Sources */,
-				CAA20D36249A57EF007FEDF4 /* WalletsApiTests.swift in Sources */,
+				0E47B1EE24EBC31E00DF6731 /* ByronMigrationsTests.swift in Sources */,
+				0E47B1D524EBC1F400DF6731 /* AddressesTests.swift in Sources */,
+				CAA20D36249A57EF007FEDF4 /* ShelleyWalletsTests.swift in Sources */,
 				0E58096524E93ED4000D12D9 /* Rest.swift in Sources */,
+				0E47B1F524EBC3D500DF6731 /* ShelleyTests.swift in Sources */,
 				0E58096F24E94D26000D12D9 /* Cardano.swift in Sources */,
+				0E47B1EA24EBC30600DF6731 /* ByronCoinSelectionsTests.swift in Sources */,
 				0E58095524E93ED4000D12D9 /* Explorer.swift in Sources */,
 				CAA20D7D249A72C7007FEDF4 /* RemoteWallet.swift in Sources */,
+				0E47B1E624EBC2E400DF6731 /* ByronWalletsTests.swift in Sources */,
+				0E47B1F324EBC37900DF6731 /* ProxyTests.swift in Sources */,
+				0E47B1DD24EBC29700DF6731 /* ShelleyCoinSelectionsTests.swift in Sources */,
+				0E47B1CE24EBC17000DF6731 /* HttpBridgeTests.swift in Sources */,
 				CAA20DB4249ABF3C007FEDF4 /* Wordlists.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
