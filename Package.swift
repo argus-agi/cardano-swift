@@ -14,7 +14,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(
             url: "https://github.com/hellc/CatalystNet.git",
-            .revision("fedc632a349ae01284354903f99dfb0969c3fde6")
+            .revision("e4fc298e83b4dc6a28331343ea5d3e0b87f1466a")
         )
     ],
     targets: [

@@ -28,5 +28,5 @@ Pod::Spec.new do |s|
     rest.source_files                   = 'Source/Cardano/Rest/**/*.{swift}'
   end
   
-  s.dependency 'CatalystNet', :git => 'https://github.com/hellc/CatalystNet.git', :commit => 'fedc632a349ae01284354903f99dfb0969c3fde6'
+  s.dependency 'CatalystNet', :git => 'https://github.com/hellc/CatalystNet.git', :commit => 'e4fc298e83b4dc6a28331343ea5d3e0b87f1466a'
 end
